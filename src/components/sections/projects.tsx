@@ -75,7 +75,7 @@ export function Projects() {
 
               {/* Video embeds */}
               {project.videos && project.videos.length > 0 && (
-                <div className={`mt-4 grid gap-3 ${project.videos.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                <div className={`mt-4 grid gap-3 ${project.videos.length > 1 ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1"}`}>
                   {project.videos.map((video, vi) => (
                     <video
                       key={vi}
@@ -83,9 +83,11 @@ export function Projects() {
                       controls
                       muted
                       playsInline
-                      preload="metadata"
+                      preload="none"
                       className="w-full rounded-lg border border-neutral-200 dark:border-neutral-800"
-                    />
+                    >
+                      <track kind="captions" />
+                    </video>
                   ))}
                 </div>
               )}
