@@ -17,9 +17,11 @@ export function Hero() {
       // Pause before deleting
       timeout = setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && displayText === "") {
-      // Move to next tagline
-      setIsDeleting(false);
-      setTaglineIndex((prev) => (prev + 1) % siteConfig.taglines.length);
+      // Move to next tagline — use setTimeout to avoid synchronous setState in effect
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setTaglineIndex((prev) => (prev + 1) % siteConfig.taglines.length);
+      }, 0);
     } else {
       // Type or delete one character
       timeout = setTimeout(

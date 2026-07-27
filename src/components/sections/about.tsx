@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { about, siteConfig } from "@/content";
 
@@ -28,10 +29,13 @@ export function About() {
             className="relative group mx-auto md:mx-0"
           >
             <div className="w-60 h-60 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 group-hover:border-blue-500 transition-colors duration-300">
-              <img
+              <Image
                 src={about.image}
                 alt={siteConfig.name}
+                width={288}
+                height={288}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
             {/* Decorative border offset */}
