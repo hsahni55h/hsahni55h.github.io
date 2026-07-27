@@ -31,18 +31,16 @@ export function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative group mx-auto md:mx-0"
           >
-            <div className="w-60 h-60 md:w-72 md:h-72 rounded-2xl overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 group-hover:border-blue-500 transition-colors duration-300">
+            <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 group-hover:border-blue-500 transition-colors duration-300">
               <Image
                 src={about.image}
                 alt={siteConfig.name}
                 width={288}
                 height={288}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 priority
               />
             </div>
-            {/* Decorative border offset */}
-            <div className="absolute -inset-2 rounded-2xl border border-blue-500/20 -z-10" />
           </motion.div>
 
           {/* Bio text */}
@@ -80,25 +78,7 @@ export function About() {
               </p>
             </div>
 
-            {/* CV / Resume download */}
-            <div className="pt-6 flex flex-wrap gap-3">
-              <a
-                href="/Himanshu_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors"
-              >
-                📄 Download CV
-              </a>
-              <a
-                href="/Himanshu_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-foreground text-sm font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-              >
-                📄 Download Resume
-              </a>
-            </div>
+
           </motion.div>
         </div>
       </div>
