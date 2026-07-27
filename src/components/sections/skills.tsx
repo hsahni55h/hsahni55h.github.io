@@ -51,7 +51,10 @@ export function Skills() {
 
         <div className="space-y-10">
           <SkillGroup title="Languages" items={skills.languages} />
-          <SkillGroup title="Tools & Frameworks" items={skills.frameworks} />
+          <SkillGroup title="ML & AI" items={skills.mlAndAi} />
+          <SkillGroup title="Data Engineering & Cloud" items={skills.dataEngineering} />
+          <SkillGroup title="DevOps & Tools" items={skills.devOpsAndTools} />
+          <SkillGroup title="Robotics" items={skills.robotics} />
           <SkillGroup title="Soft Skills" items={skills.soft} />
         </div>
       </div>

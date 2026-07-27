@@ -23,21 +23,22 @@ const siteUrl = "https://hsahni55h.github.io";
 
 export const metadata: Metadata = {
   title: {
-    default: "Himanshu Sahni — AI & Robotics Engineer",
+    default: "Himanshu Sahni — Data Scientist & AI Engineer",
     template: "%s | Himanshu Sahni",
   },
   description:
-    "Portfolio of Himanshu Sahni — AI & Robotics Engineer specializing in machine learning, autonomous systems, SLAM, and data science. Based in Gothenburg, Sweden.",
+    "Portfolio of Himanshu Sahni — Data Scientist & AI Engineer at Volvo Group. Specializing in machine learning, generative AI, predictive modeling, and building production-ready data-driven solutions. Based in Gothenburg, Sweden.",
   keywords: [
+    "Data Scientist",
     "AI Engineer",
-    "Robotics Engineer",
     "Machine Learning",
-    "Data Science",
-    "SLAM",
-    "ROS",
+    "Generative AI",
+    "MLOps",
     "Deep Learning",
+    "Predictive Modeling",
     "Portfolio",
     "Himanshu Sahni",
+    "Volvo Group",
   ],
   authors: [{ name: "Himanshu Sahni" }],
   creator: "Himanshu Sahni",
@@ -46,24 +47,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Himanshu Sahni — AI & Robotics Engineer",
+    title: "Himanshu Sahni — Data Scientist & AI Engineer",
     description:
-      "AI & Robotics Engineer specializing in machine learning, autonomous systems, and data science.",
+      "Data Scientist & AI Engineer specializing in machine learning, generative AI, and building production-ready solutions.",
     siteName: "Himanshu Sahni",
     images: [
       {
         url: `${siteUrl}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Himanshu Sahni — AI & Robotics Engineer",
+        alt: "Himanshu Sahni — Data Scientist & AI Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Himanshu Sahni — AI & Robotics Engineer",
+    title: "Himanshu Sahni — Data Scientist & AI Engineer",
     description:
-      "AI & Robotics Engineer specializing in machine learning, autonomous systems, and data science.",
+      "Data Scientist & AI Engineer specializing in machine learning, generative AI, and building production-ready solutions.",
     images: [`${siteUrl}/images/og-image.jpg`],
   },
   robots: {
