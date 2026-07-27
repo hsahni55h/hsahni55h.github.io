@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Sidebar } from "@/components/sidebar";
 import "./globals.css";
 
 const GA_ID = "G-QS4E19ZC52";
@@ -97,7 +98,7 @@ export default function RootLayout({
           content="© 2024-2026 Himanshu Sahni. CC BY-NC 4.0 — Attribution required."
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen">
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
@@ -116,7 +117,12 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Sidebar />
+          <main id="main-content" className="md:ml-56 min-h-screen pt-16 md:pt-0">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

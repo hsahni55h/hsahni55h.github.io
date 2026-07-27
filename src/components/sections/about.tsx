@@ -59,26 +59,6 @@ export function About() {
                 {paragraph}
               </p>
             ))}
-
-            <div className="pt-4">
-              <p className="text-sm font-mono text-neutral-500 dark:text-neutral-500">
-                <span className="text-blue-500">location</span> ={" "}
-                <span className="text-green-600 dark:text-green-400">
-                  &quot;{siteConfig.location}&quot;
-                </span>
-              </p>
-              <p className="text-sm font-mono text-neutral-500 dark:text-neutral-500">
-                <span className="text-blue-500">email</span> ={" "}
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="text-green-600 dark:text-green-400 hover:underline"
-                >
-                  &quot;{siteConfig.email}&quot;
-                </a>
-              </p>
-            </div>
-
-
           </motion.div>
         </div>
       </div>
