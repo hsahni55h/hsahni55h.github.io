@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Himanshu Sahni — Portfolio
 
-## Getting Started
+Personal portfolio website built with modern web technologies.
 
-First, run the development server:
+**Live:** [hsahni55h.github.io](https://hsahni55h.github.io)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 16 (App Router, TypeScript) |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion |
+| Dark Mode | next-themes |
+| Fonts | Inter + JetBrains Mono |
+| Deployment | GitHub Pages (static export via GitHub Actions) |
+
+## Project Structure
+
+```
+src/
+├── app/               # Next.js App Router (layout, page, globals.css)
+├── components/        # Reusable UI components
+│   ├── sections/      # Page sections (Hero, About, Experience, etc.)
+│   ├── navbar.tsx      # Sticky nav with mobile menu
+│   ├── footer.tsx      # Footer with social links
+│   ├── theme-provider.tsx
+│   └── theme-toggle.tsx
+├── content/           # All portfolio content data (edit here to update)
+│   └── index.ts       # Experiences, projects, skills, certifications
+└── lib/               # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Quick Start
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run dev server
+npm run dev
 
-## Learn More
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Preview production build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Content Updates
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All content (experience, projects, skills, certifications, bio) is in **`src/content/index.ts`**. Edit that single file to update the site — no need to touch components.
 
-## Deploy on Vercel
+## Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [x] Phase 1: Next.js scaffold + Tailwind + dark mode + layout
+- [x] Phase 2: All sections (Hero, About, Experience, Projects, Skills, Certs, Contact)
+- [ ] Phase 3: SEO metadata, Open Graph, sitemap, responsive polish
+- [ ] Phase 4: GitHub Actions CI/CD, Lighthouse audit, Dependabot
+- [ ] Phase 5: License, content-from-markdown, custom domain
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+All rights reserved. See [LICENSE](LICENSE) for details.
+
