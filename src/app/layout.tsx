@@ -1,3 +1,6 @@
+// © 2024-2026 Himanshu Sahni. Licensed under CC BY-NC 4.0.
+// https://github.com/hsahni55h/hsahni55h.github.io — Attribution required.
+
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -80,6 +83,16 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta
+          name="author"
+          content="Himanshu Sahni — https://github.com/hsahni55h"
+        />
+        <meta
+          name="copyright"
+          content="© 2024-2026 Himanshu Sahni. CC BY-NC 4.0 — Attribution required."
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <a
           href="#main-content"
