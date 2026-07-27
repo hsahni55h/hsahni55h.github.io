@@ -8,22 +8,17 @@ Personal portfolio built with Next.js, Tailwind CSS, and Framer Motion.
 
 ## Tech Stack
 
-| Layer      | Technology                          |
-| ---------- | ----------------------------------- |
-| Framework  | Next.js 16 (App Router, TypeScript) |
-| Styling    | Tailwind CSS v4                     |
-| Animations | Framer Motion                       |
-| Dark Mode  | next-themes                         |
-| Deployment | GitHub Pages via GitHub Actions     |
-
----
-
-## Quick Start
-
-```bash
-npm install
-npm run dev
-```
+| Layer        | Technology                             |
+| ------------ | -------------------------------------- |
+| Framework    | Next.js 16 (App Router, TypeScript)    |
+| Styling      | Tailwind CSS v4                        |
+| Animations   | Framer Motion                          |
+| Dark Mode    | next-themes                            |
+| Fonts        | Inter + JetBrains Mono                 |
+| CI/CD        | GitHub Actions (lint → build → deploy) |
+| Code Quality | ESLint + Prettier + Husky              |
+| Analytics    | Google Analytics 4                     |
+| Deployment   | GitHub Pages (static export)           |
 
 ---
 
