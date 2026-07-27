@@ -152,6 +152,7 @@ export const projects: Project[] = [
       "Employed MILP optimization solvers (Gurobi, Z3) and MPC (CasADi) for precise trajectory control and efficient task allocation.",
       "Created a prototype for a dynamic online scheduler, enabling real-time task adjustments and trajectory translations in the MPC system.",
     ],
+    videos: ["/images/Presentation_video_Scheduler_MPC.mp4"],
   },
   {
     id: "gans",
@@ -174,6 +175,7 @@ export const projects: Project[] = [
       "Implemented color-based object detection for blue paper and green Post-it notes using OpenCV, employing advanced image processing techniques.",
       "Engineered a dynamic wandering system for Kiwi car, prioritizing object detection based on battery status and developing a comprehensive navigation plan.",
     ],
+    videos: ["/images/cone_detection.mp4", "/images/kiwi_detection.mp4"],
   },
   {
     id: "cooperative-path",
@@ -185,6 +187,7 @@ export const projects: Project[] = [
       "Aimed to create a foundational algorithm for cooperative path-finding in robotic swarms, addressing time-delayed communication complexities.",
       "Applied model insights to drone-based search-and-rescue missions, enhancing communication and cooperation for locating trapped victims.",
     ],
+    videos: ["/images/without-communication.mp4", "/images/with-communication.mp4"],
     github: "https://github.com/hsahni55h/Cooperative-Path-Finding-with-Time-Delay-Communication",
   },
 ];

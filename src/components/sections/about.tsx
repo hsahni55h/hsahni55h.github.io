@@ -72,6 +72,26 @@ export function About() {
                 </a>
               </p>
             </div>
+
+            {/* CV / Resume download */}
+            <div className="pt-6 flex flex-wrap gap-3">
+              <a
+                href="/Himanshu_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-500 text-white text-sm font-medium hover:bg-blue-600 transition-colors"
+              >
+                📄 Download CV
+              </a>
+              <a
+                href="/Himanshu_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-foreground text-sm font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              >
+                📄 Download Resume
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>

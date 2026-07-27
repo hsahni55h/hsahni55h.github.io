@@ -73,6 +73,23 @@ export function Projects() {
                 ))}
               </ul>
 
+              {/* Video embeds */}
+              {project.videos && project.videos.length > 0 && (
+                <div className={`mt-4 grid gap-3 ${project.videos.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
+                  {project.videos.map((video, vi) => (
+                    <video
+                      key={vi}
+                      src={video}
+                      controls
+                      muted
+                      playsInline
+                      preload="metadata"
+                      className="w-full rounded-lg border border-neutral-200 dark:border-neutral-800"
+                    />
+                  ))}
+                </div>
+              )}
+
               {/* Tech stack tags */}
               <div className="mt-4 flex flex-wrap gap-2 pt-4 border-t border-neutral-100 dark:border-neutral-800">
                 {project.techStack.map((tech) => (
