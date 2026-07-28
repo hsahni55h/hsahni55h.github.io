@@ -7,7 +7,6 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ThemeToggle } from "./theme-toggle";
 import { siteConfig } from "@/content";
 
 // ── Icons (stroke-based, 24×24) ────────────────────────────
@@ -189,7 +188,6 @@ export function Sidebar() {
                 <MailIcon />
               </a>
             </div>
-            <ThemeToggle />
           </div>
         </div>
       </aside>
@@ -203,7 +201,6 @@ export function Sidebar() {
           HS<span className="text-blue-500">.</span>
         </Link>
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex flex-col gap-1.5 p-2"
