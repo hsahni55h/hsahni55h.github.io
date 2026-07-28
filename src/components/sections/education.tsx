@@ -29,19 +29,19 @@ export function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 hover:border-blue-500/50 transition-all duration-300 bg-white dark:bg-neutral-900"
+              className="group rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 hover:border-blue-500/50 transition-all duration-300 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md dark:shadow-none"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
                   <h3 className="text-lg font-bold text-foreground">
                     {edu.degree} — {edu.field}
                   </h3>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1 font-medium">
                     {edu.institution}
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-xs font-mono text-blue-500 bg-blue-50 dark:bg-blue-950/50 px-3 py-1 rounded-full">
+                  <span className="inline-block text-xs font-mono text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 px-3 py-1 rounded-full">
                     {edu.period}
                   </span>
                   <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
@@ -59,7 +59,7 @@ export function Education() {
                     {edu.courses.map((course) => (
                       <span
                         key={course}
-                        className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400"
+                        className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-400 font-medium"
                       >
                         {course}
                       </span>

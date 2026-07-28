@@ -21,7 +21,7 @@ function SkillGroup({ title, items }: { title: string; items: string[] }) {
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: i * 0.05 }}
             whileHover={{ scale: 1.05, y: -2 }}
-            className="px-4 py-2 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm text-neutral-700 dark:text-neutral-300 font-medium hover:border-blue-500/50 hover:text-blue-500 dark:hover:text-blue-400 transition-colors cursor-default shadow-sm"
+            className="px-4 py-2 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm text-neutral-800 dark:text-neutral-300 font-medium hover:border-blue-500/50 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors cursor-default shadow-sm"
           >
             {skill}
           </motion.span>
@@ -35,7 +35,7 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 px-6 bg-neutral-50 dark:bg-neutral-950/50"
+      className="py-24 px-6"
     >
       <div className="max-w-4xl mx-auto">
         <motion.h2

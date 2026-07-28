@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0a0a0a;
+  --foreground: #111827;
 }
 
 .dark {
@@ -30,7 +30,7 @@ body {
 
 /* Accessible focus styles */
 :focus-visible {
-  outline: 2px solid #3B82F6;
+  outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
