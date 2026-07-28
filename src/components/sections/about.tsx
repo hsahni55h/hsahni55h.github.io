@@ -16,10 +16,10 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-12"
+          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           About Me
-          <span className="text-blue-500">.</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
         <div className="grid md:grid-cols-[300px_1fr] gap-12 items-start">
@@ -31,7 +31,7 @@ export function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative group mx-auto md:mx-0"
           >
-            <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-neutral-200 dark:border-neutral-800 group-hover:border-blue-500 transition-colors duration-300">
+            <div className="w-60 h-60 md:w-72 md:h-72 rounded-full overflow-hidden border border-cyber-border group-hover:border-cyber-cyan transition-colors duration-300">
               <Image
                 src={about.image}
                 alt={siteConfig.name}
@@ -54,7 +54,7 @@ export function About() {
             {about.bio.map((paragraph, i) => (
               <p
                 key={i}
-                className="text-neutral-600 dark:text-neutral-400 leading-relaxed"
+                className="text-[#cce8ff]/75 leading-relaxed"
               >
                 {paragraph}
               </p>

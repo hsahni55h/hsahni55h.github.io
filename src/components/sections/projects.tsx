@@ -67,16 +67,16 @@ function ProjectModal({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-2xl"
+        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-cyber-border bg-[#050f1f] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 pb-4 bg-white dark:bg-neutral-900 border-b border-neutral-100 dark:border-neutral-800">
+        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 pb-4 bg-[#050f1f] border-b border-cyber-border">
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 leading-tight">
+            <h3 className="text-xl font-bold text-white leading-tight">
               {project.title}
             </h3>
-            <p className="text-xs font-mono text-blue-500 mt-1">
+            <p className="text-xs font-mono text-cyber-green mt-1 tracking-[2px]">
               {project.period}
             </p>
           </div>
@@ -86,7 +86,7 @@ function ProjectModal({
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-cyber-muted hover:text-cyber-cyan border border-cyber-border hover:border-cyber-cyan transition-colors"
               >
                 <GitHubIcon />
                 Code
@@ -95,7 +95,7 @@ function ProjectModal({
             )}
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="p-2 rounded-lg text-cyber-muted hover:text-cyber-cyan hover:bg-white/5 transition-colors"
               aria-label="Close"
             >
               <CloseIcon />
@@ -110,9 +110,9 @@ function ProjectModal({
             {project.bullets.map((bullet, j) => (
               <li
                 key={j}
-                className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed flex gap-2"
+                className="text-sm text-[#cce8ff]/60 leading-relaxed flex gap-2"
               >
-                <span className="text-blue-500 mt-0.5 shrink-0">▹</span>
+                <span className="text-cyber-cyan mt-0.5 shrink-0">▸</span>
                 <span>{bullet}</span>
               </li>
             ))}
@@ -121,7 +121,7 @@ function ProjectModal({
           {/* Videos */}
           {project.videos && project.videos.length > 0 && (
             <div className="space-y-3">
-              <p className="text-xs font-mono text-blue-500 uppercase tracking-wider">
+              <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px]">
                 Demo
               </p>
               <div
@@ -135,7 +135,7 @@ function ProjectModal({
                     muted
                     playsInline
                     preload="metadata"
-                    className="w-full rounded-lg border border-neutral-200 dark:border-neutral-800"
+                    className="w-full rounded-lg border border-cyber-border"
                   >
                     <track kind="captions" />
                   </video>
@@ -145,15 +145,15 @@ function ProjectModal({
           )}
 
           {/* Tech stack */}
-          <div className="pt-4 border-t border-neutral-100 dark:border-neutral-800">
-            <p className="text-xs font-mono text-blue-500 uppercase tracking-wider mb-3">
+          <div className="pt-4 border-t border-cyber-border">
+            <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
               Tech Stack
             </p>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs font-mono px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400"
+                  className="text-xs font-mono px-2.5 py-1 bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
                 >
                   {tech}
                 </span>
@@ -178,10 +178,10 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-16"
+          className="text-3xl md:text-4xl font-bold text-white mb-16 tracking-[2px] uppercase flex items-center gap-5"
         >
           Projects
-          <span className="text-blue-500">.</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -193,14 +193,14 @@ export function Projects() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               onClick={() => setSelected(project)}
-              className="group cursor-pointer rounded-xl border border-neutral-200 dark:border-neutral-800 p-5 hover:border-blue-500/50 transition-all duration-300 bg-white dark:bg-neutral-900 hover:shadow-lg hover:shadow-blue-500/5 flex flex-col"
+              className="group cursor-pointer rounded-xl border border-cyber-border p-5 hover:border-cyber-cyan/40 transition-all duration-300 bg-[#050f1f]/80 hover:translate-y-[-6px] flex flex-col relative overflow-hidden"
             >
               {/* Top row: icons for available content */}
               <div className="flex items-center justify-between mb-3">
-                <span className="inline-block text-xs font-mono text-blue-500 bg-blue-50 dark:bg-blue-950/50 px-3 py-1 rounded-full">
+                <span className="inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[1px]">
                   {project.period}
                 </span>
-                <div className="flex items-center gap-2 text-neutral-400">
+                <div className="flex items-center gap-2 text-cyber-muted">
                   {project.videos && project.videos.length > 0 && (
                     <span title="Has demo video">
                       <VideoIcon />
@@ -215,34 +215,34 @@ export function Projects() {
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-bold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-500 transition-colors leading-snug flex-1">
+              <h3 className="text-base font-bold text-white group-hover:text-cyber-cyan transition-colors leading-snug flex-1">
                 {project.title}
               </h3>
 
               {/* Preview: first bullet truncated */}
-              <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-2">
+              <p className="mt-3 text-sm text-[#cce8ff]/60 leading-relaxed line-clamp-2">
                 {project.bullets[0]}
               </p>
 
               {/* Tech stack tags */}
-              <div className="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-neutral-100 dark:border-neutral-800">
+              <div className="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-cyber-border">
                 {project.techStack.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
-                    className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-500"
+                    className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 4 && (
-                  <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-500">
+                  <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]">
                     +{project.techStack.length - 4}
                   </span>
                 )}
               </div>
 
               {/* Click hint */}
-              <p className="mt-3 text-[11px] text-neutral-400 dark:text-neutral-600 font-mono group-hover:text-blue-500/60 transition-colors">
+              <p className="mt-3 text-[11px] text-cyber-muted/60 font-mono group-hover:text-cyber-cyan/60 transition-colors tracking-[1px]">
                 Click to view details →
               </p>
             </motion.article>

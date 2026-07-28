@@ -6,6 +6,9 @@ import Script from "next/script";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Sidebar } from "@/components/sidebar";
+import { NeuralBackground } from "@/components/neural-bg";
+import { CustomCursor } from "@/components/custom-cursor";
+import { HudOverlay } from "@/components/hud-overlay";
 import "./globals.css";
 
 const GA_ID = "G-QS4E19ZC52";
@@ -118,8 +121,11 @@ export default function RootLayout({
           Skip to content
         </a>
         <ThemeProvider>
+          <NeuralBackground />
+          <CustomCursor />
+          <HudOverlay />
           <Sidebar />
-          <main id="main-content" className="md:ml-56 min-h-screen pt-16 md:pt-0">
+          <main id="main-content" className="relative z-[2] md:ml-56 min-h-screen pt-16 md:pt-0">
             {children}
           </main>
         </ThemeProvider>

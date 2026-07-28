@@ -15,10 +15,10 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-16"
+          className="text-3xl md:text-4xl font-bold text-white mb-16 tracking-[2px] uppercase flex items-center gap-5"
         >
           Experience
-          <span className="text-blue-500">.</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
         <div className="space-y-6">
@@ -29,18 +29,18 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 hover:border-blue-500/50 transition-all duration-300 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md dark:shadow-none"
+              className="group rounded-xl border border-cyber-border p-6 hover:border-cyber-cyan/40 transition-all duration-300 bg-[#050f1f]/80 hover:translate-y-[-4px]"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
+                  <h3 className="text-lg font-bold text-white">
                     {exp.role}
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-0.5 font-medium">
+                  <p className="text-sm text-cyber-cyan mt-0.5 font-medium tracking-[1px]">
                     {exp.company} · {exp.location}
                   </p>
                 </div>
-                <span className="inline-block text-xs font-mono text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 px-3 py-1 rounded-full whitespace-nowrap">
+                <span className="inline-block text-xs font-mono text-cyber-green bg-transparent border border-cyber-green/30 px-3 py-1 rounded-full whitespace-nowrap tracking-[3px]">
                   {exp.period}
                 </span>
               </div>
@@ -49,9 +49,9 @@ export function Experience() {
                 {exp.bullets.map((bullet, j) => (
                   <li
                     key={j}
-                    className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed flex gap-2"
+                    className="text-sm text-[#cce8ff]/65 leading-relaxed flex gap-2"
                   >
-                    <span className="text-blue-500 mt-0.5 shrink-0">▹</span>
+                    <span className="text-cyber-cyan mt-0.5 shrink-0">▸</span>
                     <span>{bullet}</span>
                   </li>
                 ))}

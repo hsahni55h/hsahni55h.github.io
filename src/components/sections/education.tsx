@@ -15,10 +15,10 @@ export function Education() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-12"
+          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           Education
-          <span className="text-blue-500">.</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
         <div className="space-y-6">
@@ -29,37 +29,37 @@ export function Education() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 hover:border-blue-500/50 transition-all duration-300 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md dark:shadow-none"
+              className="group rounded-xl border border-cyber-border p-6 hover:border-cyber-cyan/40 transition-all duration-300 bg-[#050f1f]/80 hover:translate-y-[-4px]"
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
-                  <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
+                  <h3 className="text-lg font-bold text-white">
                     {edu.degree} — {edu.field}
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1 font-medium">
+                  <p className="text-sm text-cyber-cyan mt-1 font-medium tracking-[1px]">
                     {edu.institution}
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-xs font-mono text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 px-3 py-1 rounded-full">
+                  <span className="inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[3px]">
                     {edu.period}
                   </span>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                  <p className="text-xs text-cyber-muted mt-1">
                     {edu.location}
                   </p>
                 </div>
               </div>
 
               {edu.courses && (
-                <div className="mt-4 pt-4 border-t border-neutral-100 dark:border-neutral-800">
-                  <p className="text-xs font-mono text-blue-500 uppercase tracking-wider mb-3">
+                <div className="mt-4 pt-4 border-t border-cyber-border">
+                  <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
                     Key Coursework
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {edu.courses.map((course) => (
                       <span
                         key={course}
-                        className="text-xs px-2.5 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-400 font-medium"
+                        className="text-xs px-2.5 py-1 rounded-full border border-cyber-border text-[#cce8ff]/70 font-mono tracking-[1px] hover:border-cyber-green hover:text-cyber-green transition-colors"
                       >
                         {course}
                       </span>

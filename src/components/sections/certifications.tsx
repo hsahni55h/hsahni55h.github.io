@@ -15,10 +15,10 @@ export function Certifications() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-12"
+          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           Certifications
-          <span className="text-blue-500">.</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
         <div className="grid sm:grid-cols-2 gap-4">
@@ -32,14 +32,14 @@ export function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group flex items-start gap-4 p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/5"
+              className="group flex items-start gap-4 p-5 rounded-xl border border-cyber-border bg-[#050f1f]/80 hover:border-cyber-cyan/40 transition-all duration-300 hover:translate-y-[-4px]"
             >
               <div className="text-2xl shrink-0 mt-0.5">🏆</div>
               <div>
-                <h3 className="font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-500 transition-colors text-sm leading-snug">
+                <h3 className="font-semibold text-white group-hover:text-cyber-cyan transition-colors text-sm leading-snug">
                   {cert.name}
                 </h3>
-                <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1 font-mono">
+                <p className="text-xs text-cyber-muted mt-1 font-mono tracking-[1px]">
                   {cert.issuer}
                 </p>
               </div>

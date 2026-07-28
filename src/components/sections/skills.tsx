@@ -9,7 +9,7 @@ import { skills } from "@/content";
 function SkillGroup({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h3 className="text-sm font-mono text-blue-500 uppercase tracking-wider mb-4">
+      <h3 className="text-sm font-mono text-cyber-cyan uppercase tracking-[2px] mb-4">
         {title}
       </h3>
       <div className="flex flex-wrap gap-2">
@@ -21,7 +21,7 @@ function SkillGroup({ title, items }: { title: string; items: string[] }) {
             viewport={{ once: true }}
             transition={{ duration: 0.3, delay: i * 0.05 }}
             whileHover={{ scale: 1.05, y: -2 }}
-            className="px-4 py-2 rounded-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-sm text-neutral-800 dark:text-neutral-300 font-medium hover:border-blue-500/50 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950/20 transition-colors cursor-default shadow-sm"
+            className="px-4 py-2.5 font-mono text-xs font-medium tracking-[1px] border border-cyber-border text-[#cce8ff] hover:border-cyber-green hover:text-cyber-green transition-colors cursor-default"
           >
             {skill}
           </motion.span>
@@ -43,10 +43,10 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-12"
+          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           Skills
-          <span className="text-blue-500">.</span>
+          <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
         <div className="space-y-10">

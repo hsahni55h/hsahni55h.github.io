@@ -1,18 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #111827;
+  --background: #020916;
+  --foreground: #cce8ff;
+  --cyan: #00f5ff;
+  --green: #00ff88;
+  --purple: #7b2fff;
+  --blue: #1a6fff;
+  --muted: #4a6fa5;
+  --border: rgba(0, 245, 255, 0.15);
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #020916;
+  --foreground: #cce8ff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cyber-cyan: var(--cyan);
+  --color-cyber-green: var(--green);
+  --color-cyber-purple: var(--purple);
+  --color-cyber-blue: var(--blue);
+  --color-cyber-muted: var(--muted);
+  --color-cyber-border: var(--border);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
@@ -28,9 +40,134 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+/* Hide native cursor when custom cursor is active (desktop only) */
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Scanlines overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 10, 0.06) 2px,
+    rgba(0, 0, 10, 0.06) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glitch effect for hero name */
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--cyan);
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  animation: glitch1 4s infinite linear;
+}
+.glitch::after {
+  left: -2px;
+  text-shadow: 1px 0 var(--purple);
+  clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+  animation: glitch2 4s infinite linear;
+}
+@keyframes glitch1 {
+  0%,
+  90%,
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    transform: none;
+  }
+  92% {
+    clip-path: polygon(0 10%, 100% 10%, 100% 44%, 0 44%);
+    transform: translateX(-3px);
+  }
+  94% {
+    clip-path: polygon(0 20%, 100% 20%, 100% 54%, 0 54%);
+    transform: translateX(3px);
+  }
+}
+@keyframes glitch2 {
+  0%,
+  88%,
+  100% {
+    clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+    transform: none;
+  }
+  90% {
+    clip-path: polygon(0 50%, 100% 50%, 100% 80%, 0 80%);
+    transform: translateX(3px);
+  }
+  92% {
+    clip-path: polygon(0 70%, 100% 70%, 100% 90%, 0 90%);
+    transform: translateX(-2px);
+  }
+}
+
+/* Cursor blink for typing animation */
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--cyan);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Pulse animation for status dot */
+@keyframes pulse-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+}
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
 /* Accessible focus styles */
 :focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid var(--cyan);
   outline-offset: 2px;
 }
 

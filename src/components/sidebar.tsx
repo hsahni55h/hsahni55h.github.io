@@ -123,8 +123,8 @@ export function Sidebar() {
               onClick={onNavigate}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 isActive
-                  ? "text-blue-500 bg-blue-50 dark:bg-blue-950/30"
-                  : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
+                  ? "text-cyber-cyan bg-cyber-cyan/10"
+                  : "text-cyber-muted hover:text-cyber-cyan hover:bg-white/5"
               }`}
             >
               {item.icon}
@@ -139,18 +139,15 @@ export function Sidebar() {
   return (
     <>
       {/* ── Desktop sidebar ─────────────────────────────── */}
-      <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-56 flex-col border-r border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md z-40">
+      <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-56 flex-col border-r border-cyber-border bg-[#020916]/90 backdrop-blur-md z-40">
         {/* Logo */}
         <div className="px-6 pt-8 pb-2">
           <Link
             href="/"
-            className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 hover:opacity-80 transition-opacity"
+            className="text-xl font-bold tracking-tight font-mono text-cyber-cyan hover:opacity-80 transition-opacity"
           >
-            HS<span className="text-blue-500">.</span>
+            HS
           </Link>
-          <p className="text-xs font-mono text-neutral-500 dark:text-neutral-500 mt-1">
-            {siteConfig.title}
-          </p>
         </div>
 
         {/* Navigation */}
@@ -159,14 +156,14 @@ export function Sidebar() {
         </nav>
 
         {/* Bottom: social links + theme toggle */}
-        <div className="px-4 py-4 border-t border-neutral-200 dark:border-neutral-800">
+        <div className="px-4 py-4 border-t border-cyber-border">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <a
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                className="text-cyber-muted hover:text-cyber-cyan transition-colors"
                 aria-label="GitHub"
               >
                 <GitHubIcon />
@@ -175,14 +172,14 @@ export function Sidebar() {
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                className="text-cyber-muted hover:text-cyber-cyan transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon />
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                className="text-cyber-muted hover:text-cyber-cyan transition-colors"
                 aria-label="Email"
               >
                 <MailIcon />
@@ -193,12 +190,12 @@ export function Sidebar() {
       </aside>
 
       {/* ── Mobile header ───────────────────────────────── */}
-      <header className="md:hidden fixed top-0 left-0 right-0 h-16 z-50 flex items-center justify-between px-4 border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md">
+      <header className="md:hidden fixed top-0 left-0 right-0 h-16 z-50 flex items-center justify-between px-4 border-b border-cyber-border bg-[#020916]/90 backdrop-blur-md">
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight text-neutral-900 dark:text-neutral-100"
+          className="text-lg font-bold tracking-tight font-mono text-cyber-cyan"
         >
-          HS<span className="text-blue-500">.</span>
+          HS<span className="text-cyber-green">::</span>PORT
         </Link>
         <div className="flex items-center gap-3">
           <button
@@ -207,17 +204,17 @@ export function Sidebar() {
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-5 h-0.5 bg-foreground transition-transform ${
+              className={`block w-5 h-0.5 bg-cyber-cyan transition-transform ${
                 mobileOpen ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
-              className={`block w-5 h-0.5 bg-foreground transition-opacity ${
+              className={`block w-5 h-0.5 bg-cyber-cyan transition-opacity ${
                 mobileOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-5 h-0.5 bg-foreground transition-transform ${
+              className={`block w-5 h-0.5 bg-cyber-cyan transition-transform ${
                 mobileOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
@@ -244,20 +241,17 @@ export function Sidebar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed left-0 top-0 bottom-0 w-64 z-50 md:hidden bg-white dark:bg-neutral-950 border-r border-neutral-200 dark:border-neutral-800 flex flex-col"
+              className="fixed left-0 top-0 bottom-0 w-64 z-50 md:hidden bg-[#020916] border-r border-cyber-border flex flex-col"
             >
               {/* Logo */}
               <div className="px-6 pt-8 pb-2">
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
-                  className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100"
+                  className="text-xl font-bold tracking-tight font-mono text-cyber-cyan"
                 >
-                  HS<span className="text-blue-500">.</span>
+                  HS
                 </Link>
-                <p className="text-xs font-mono text-neutral-500 mt-1">
-                  {siteConfig.title}
-                </p>
               </div>
 
               {/* Links */}
@@ -266,13 +260,13 @@ export function Sidebar() {
               </div>
 
               {/* Social */}
-              <div className="px-4 py-4 border-t border-neutral-200 dark:border-neutral-800">
+              <div className="px-4 py-4 border-t border-cyber-border">
                 <div className="flex items-center gap-3">
                   <a
                     href={siteConfig.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                    className="text-cyber-muted hover:text-cyber-cyan transition-colors"
                     aria-label="GitHub"
                   >
                     <GitHubIcon />
@@ -281,14 +275,14 @@ export function Sidebar() {
                     href={siteConfig.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                    className="text-cyber-muted hover:text-cyber-cyan transition-colors"
                     aria-label="LinkedIn"
                   >
                     <LinkedInIcon />
                   </a>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
+                    className="text-cyber-muted hover:text-cyber-cyan transition-colors"
                     aria-label="Email"
                   >
                     <MailIcon />

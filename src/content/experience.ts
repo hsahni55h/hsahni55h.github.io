@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
   {
     company: "Volvo Group",
     location: "Gothenburg, Sweden",
-    role: "Summer Intern — Data Science",
+    role: "Summer Worker",
     period: "June 2024 – September 2024",
     bullets: [
       "Conducted data analysis and developed machine learning models on customer usage data to derive actionable insights and accurately predict driver behavior patterns, enhancing fleet efficiency and safety.",
@@ -31,7 +31,7 @@ export const experiences: Experience[] = [
     company: "Volvo Group",
     location: "Gothenburg, Sweden",
     role: "Master Thesis Worker",
-    period: "January 2024 – July 2024",
+    period: "January 2024 – June 2024",
     bullets: [
       "Developed and implemented agent-based architectures using open-source Large Language Models (Code Llama 2, Mixtral 8x7B) for analyzing industrial logged data, focusing on automating data analysis and enabling natural language interactions.",
       "Crafted advanced prompt engineering methodologies for complex data interpretation, reasoning, code synthesis, and visualization tasks.",
