@@ -43,7 +43,7 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-foreground mb-12"
+          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-12"
         >
           Skills
           <span className="text-blue-500">.</span>

@@ -45,7 +45,7 @@ export function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] md:min-h-screen text-center px-6 overflow-hidden">
       {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-transparent to-transparent dark:from-blue-950/20 dark:via-transparent dark:to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-50 via-transparent to-transparent dark:from-blue-950/20 dark:via-transparent dark:to-transparent" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -68,7 +68,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100"
         >
           {siteConfig.name}
           <span className="text-blue-500">.</span>

@@ -15,7 +15,7 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-foreground mb-16"
+          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-16"
         >
           Experience
           <span className="text-blue-500">.</span>
@@ -33,7 +33,7 @@ export function Experience() {
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground">
+                  <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
                     {exp.role}
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-0.5 font-medium">

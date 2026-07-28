@@ -15,7 +15,7 @@ export function Education() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-foreground mb-12"
+          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-12"
         >
           Education
           <span className="text-blue-500">.</span>
@@ -33,7 +33,7 @@ export function Education() {
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
-                  <h3 className="text-lg font-bold text-foreground">
+                  <h3 className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
                     {edu.degree} — {edu.field}
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1 font-medium">

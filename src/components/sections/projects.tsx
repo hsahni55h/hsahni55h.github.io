@@ -73,7 +73,7 @@ function ProjectModal({
         {/* Header */}
         <div className="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 pb-4 bg-white dark:bg-neutral-900 border-b border-neutral-100 dark:border-neutral-800">
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-foreground leading-tight">
+            <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 leading-tight">
               {project.title}
             </h3>
             <p className="text-xs font-mono text-blue-500 mt-1">
@@ -86,7 +86,7 @@ function ProjectModal({
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-foreground dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
               >
                 <GitHubIcon />
                 Code
@@ -95,7 +95,7 @@ function ProjectModal({
             )}
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-neutral-500 hover:text-foreground hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              className="p-2 rounded-lg text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
               aria-label="Close"
             >
               <CloseIcon />
@@ -178,7 +178,7 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-foreground mb-16"
+          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-neutral-100 mb-16"
         >
           Projects
           <span className="text-blue-500">.</span>
@@ -215,12 +215,12 @@ export function Projects() {
               </div>
 
               {/* Title */}
-              <h3 className="text-base font-bold text-foreground group-hover:text-blue-500 transition-colors leading-snug flex-1">
+              <h3 className="text-base font-bold text-neutral-900 dark:text-neutral-100 group-hover:text-blue-500 transition-colors leading-snug flex-1">
                 {project.title}
               </h3>
 
               {/* Preview: first bullet truncated */}
-              <p className="mt-3 text-sm text-neutral-500 dark:text-neutral-500 leading-relaxed line-clamp-2">
+              <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed line-clamp-2">
                 {project.bullets[0]}
               </p>
 

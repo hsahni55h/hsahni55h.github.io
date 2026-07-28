@@ -125,7 +125,7 @@ export function Sidebar() {
               className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 isActive
                   ? "text-blue-500 bg-blue-50 dark:bg-blue-950/30"
-                  : "text-neutral-600 dark:text-neutral-400 hover:text-foreground dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
+                  : "text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-900"
               }`}
             >
               {item.icon}
@@ -145,7 +145,7 @@ export function Sidebar() {
         <div className="px-6 pt-8 pb-2">
           <Link
             href="/"
-            className="text-xl font-bold tracking-tight text-foreground hover:opacity-80 transition-opacity"
+            className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100 hover:opacity-80 transition-opacity"
           >
             HS<span className="text-blue-500">.</span>
           </Link>
@@ -167,7 +167,7 @@ export function Sidebar() {
                 href={siteConfig.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 dark:text-neutral-400 hover:text-foreground dark:hover:text-white transition-colors"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
                 aria-label="GitHub"
               >
                 <GitHubIcon />
@@ -176,14 +176,14 @@ export function Sidebar() {
                 href={siteConfig.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-500 dark:text-neutral-400 hover:text-foreground dark:hover:text-white transition-colors"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon />
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-neutral-500 dark:text-neutral-400 hover:text-foreground dark:hover:text-white transition-colors"
+                className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors"
                 aria-label="Email"
               >
                 <MailIcon />
@@ -198,7 +198,7 @@ export function Sidebar() {
       <header className="md:hidden fixed top-0 left-0 right-0 h-16 z-50 flex items-center justify-between px-4 border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md">
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight text-foreground"
+          className="text-lg font-bold tracking-tight text-neutral-900 dark:text-neutral-100"
         >
           HS<span className="text-blue-500">.</span>
         </Link>
@@ -254,7 +254,7 @@ export function Sidebar() {
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
-                  className="text-xl font-bold tracking-tight text-foreground"
+                  className="text-xl font-bold tracking-tight text-neutral-900 dark:text-neutral-100"
                 >
                   HS<span className="text-blue-500">.</span>
                 </Link>
@@ -275,7 +275,7 @@ export function Sidebar() {
                     href={siteConfig.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-foreground transition-colors"
+                    className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
                     aria-label="GitHub"
                   >
                     <GitHubIcon />
@@ -284,14 +284,14 @@ export function Sidebar() {
                     href={siteConfig.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-foreground transition-colors"
+                    className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
                     aria-label="LinkedIn"
                   >
                     <LinkedInIcon />
                   </a>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="text-neutral-500 hover:text-foreground transition-colors"
+                    className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors"
                     aria-label="Email"
                   >
                     <MailIcon />
