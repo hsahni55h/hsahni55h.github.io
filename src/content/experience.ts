@@ -1,9 +1,15 @@
+export interface ExperienceProject {
+  title: string;
+  bullets: string[];
+}
+
 export interface Experience {
   company: string;
   location: string;
   role: string;
   period: string;
-  bullets: string[];
+  bullets?: string[];
+  projects?: ExperienceProject[];
 }
 
 export const experiences: Experience[] = [
@@ -12,19 +18,36 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Data Scientist",
     period: "September 2024 – Present",
-    bullets: [
-      "Developing an end-to-end defect detection system combining predictive modeling and generative AI-powered root cause analysis to identify failures early, enabling proactive interventions that save time and reduce costs across operations.",
-      "Building and deploying production-ready tools from concept to user-facing applications — developing APIs and collaborating with frontend developers and UX designers to deliver solutions that streamline manual processes and improve employee productivity.",
-      "Translating business requirements into data-driven solutions by working closely with stakeholders and cross-functional teams, iterating based on user feedback to ensure tools are technically sound and aligned with real business needs.",
+    projects: [
+      {
+        title: "Warranty AI — Volvo Trucks",
+        bullets: [
+          "Developing a large-scale claim evaluation platform combining rules-based checks, ML models, and GenAI-powered agents to support the end-to-end warranty process. Built for Volvo Group at large, starting with Volvo Trucks, and will extend across other Volvo Group businesses, with Renault Trucks next in line.",
+          "Building scalable feature, data, and ML pipelines in Azure Databricks using PySpark, SQL, Unity Catalog, and MLflow.",
+          "Supporting model training, serving, monitoring, and continuous improvement across the ML lifecycle.",
+          "Building real-time inference using Azure Functions and Azure Service Bus.",
+          "Connecting AI services to enterprise and on-prem claim-handling systems.",
+          "Contributing to a shared engineering monorepo with an emphasis on maintainable, well-tested code.",
+        ],
+      },
+      {
+        title: "Defect Detection and Elimination (DDE) — Volvo Penta",
+        bullets: [
+          "Developed an end-to-end defect detection system combining predictive modeling and generative AI-powered root cause analysis to identify failures early and enable proactive interventions, reducing time and cost across operations. Took ownership of the data science, GenAI, and backend development to deliver a fully functional MVP before transitioning to the next project.",
+          "Built and deployed a Weibull analysis tool that let users configure and customize a wide range of variables within a single interface, replacing a highly manual, multi-step process; cut analysis time from 20-30 minutes to 1-2 minutes.",
+          "Continuously prototyped data science and GenAI-based solutions in response to evolving business needs, building and deploying production-ready tools from concept to user-facing applications, including APIs and frontend development.",
+          "Worked closely with business stakeholders, senior management, quality case managers, quality champions, and consultants to translate requirements into data-driven solutions, iterating on user feedback.",
+        ],
+      },
     ],
   },
   {
     company: "Volvo Group",
     location: "Gothenburg, Sweden",
-    role: "Summer Worker",
+    role: "Summer Intern",
     period: "June 2024 – September 2024",
     bullets: [
-      "Conducted data analysis and developed machine learning models on customer usage data to derive actionable insights and accurately predict driver behavior patterns, enhancing fleet efficiency and safety.",
+      "Analyzed real-world truck usage data, combining vehicle telemetry with GPS data across variables such as terrain, load, temperature, and driving location, to identify patterns in driver behavior. Derived actionable insights and recommendations to improve driving patterns, supporting improvements in fuel efficiency and fleet efficiency.",
     ],
   },
   {
@@ -33,9 +56,10 @@ export const experiences: Experience[] = [
     role: "Master Thesis Worker",
     period: "January 2024 – June 2024",
     bullets: [
-      "Developed and implemented agent-based architectures using open-source Large Language Models (Code Llama 2, Mixtral 8x7B) for analyzing industrial logged data, focusing on automating data analysis and enabling natural language interactions.",
-      "Crafted advanced prompt engineering methodologies for complex data interpretation, reasoning, code synthesis, and visualization tasks.",
-      "Collaborated with the team on development and evaluation using standardized and custom metrics to ensure accuracy, reliability, and effectiveness.",
+      "Built a GenAI-powered analysis tool for the Powertrain department to analyze logged vehicle data from truck ECUs stored in MF4 files, enabling users to run complex analyses via natural-language interaction rather than manual data processing.",
+      "Developed and implemented agent-based architectures using open-source large language models, including Code Llama 2 and Mixtral 8x7B, to analyze industrial logged data and enable natural language interaction with the system.",
+      "Designed and applied advanced prompt engineering methods for complex tasks spanning data interpretation, reasoning, code synthesis, and visualization.",
+      "Collaborated with the team to develop and evaluate the tool, using standardized and custom metrics to assess accuracy, reliability, and effectiveness.",
     ],
   },
   {

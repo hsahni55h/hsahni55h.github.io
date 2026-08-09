@@ -46,7 +46,7 @@ export function Experience() {
               </div>
 
               <ul className="space-y-2">
-                {exp.bullets.map((bullet, j) => (
+                {exp.bullets?.map((bullet, j) => (
                   <li
                     key={j}
                     className="text-sm text-[#cce8ff]/65 leading-relaxed flex gap-2"
@@ -56,6 +56,29 @@ export function Experience() {
                   </li>
                 ))}
               </ul>
+
+              {exp.projects && (
+                <div className="space-y-6 mt-2">
+                  {exp.projects.map((project, pi) => (
+                    <div key={pi}>
+                      <h4 className="text-sm font-bold text-cyber-green font-mono tracking-[1px] mb-3">
+                        {project.title}
+                      </h4>
+                      <ul className="space-y-2">
+                        {project.bullets.map((bullet, j) => (
+                          <li
+                            key={j}
+                            className="text-sm text-[#cce8ff]/65 leading-relaxed flex gap-2"
+                          >
+                            <span className="text-cyber-cyan mt-0.5 shrink-0">▸</span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

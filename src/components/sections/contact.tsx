@@ -232,7 +232,7 @@ export function Contact() {
                 </h3>
               </div>
               <p className="text-sm text-cyber-green/80 font-medium">
-                Open to freelance, contract, part-time &amp; full-time roles
+                Open to remote opportunities, freelance, contract &amp; part-time roles
               </p>
             </div>
           </motion.aside>
