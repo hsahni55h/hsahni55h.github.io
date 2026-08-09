@@ -5,7 +5,6 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -45,9 +44,8 @@ export function Navbar() {
           ))}
         </ul>
 
-        {/* Right side: theme toggle + mobile menu button */}
+        {/* Right side: mobile menu button */}
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden flex flex-col gap-1.5 p-2"
