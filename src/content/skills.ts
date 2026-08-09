@@ -25,10 +25,13 @@ export const skills = {
   dataEngineering: [
     "ETL Pipelines",
     "Azure Databricks",
+    "Azure Data Factory",
+    "Azure Service Bus",
+    "Azure Functions",
     "Microsoft Azure",
     "AWS",
+    "Cloud Deployment",
     "Data Visualization",
-    "Power BI",
   ],
   devOpsAndTools: [
     "Docker",

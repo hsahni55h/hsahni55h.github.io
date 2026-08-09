@@ -35,7 +35,7 @@ export function Hero() {
               : current.slice(0, displayText.length + 1)
           );
         },
-        isDeleting ? 40 : 80
+        isDeleting ? 25 : 50
       );
     }
 

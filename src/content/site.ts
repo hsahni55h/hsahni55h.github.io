@@ -5,11 +5,12 @@ export const siteConfig = {
   email: "sahni.h1998@gmail.com",
   linkedin: "https://www.linkedin.com/in/himanshu-sahni07/",
   github: "https://github.com/hsahni55h",
-  formspreeId: "YOUR_FORMSPREE_ID", // Replace with your Formspree form ID from https://formspree.io
+  formspreeId: "xjybgqpv",
   taglines: [
     "Data Scientist",
-    "AI & ML Engineer",
-    "Building Data-Driven Solutions",
-    "From Notebooks to Production",
+    "GenAI & ML Engineer",
+    "Building Enterprise AI Systems",
+    "Turning Data Into Decisions",
+    "From Prototype to Production",
   ],
 };
