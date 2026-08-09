@@ -100,6 +100,50 @@ export default function RootLayout({
           name="copyright"
           content="© 2024-2026 Himanshu Sahni. CC BY-NC 4.0 — Attribution required."
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Himanshu Sahni",
+              url: siteUrl,
+              jobTitle: "Data Scientist & AI Engineer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Volvo Group",
+              },
+              alumniOf: [
+                {
+                  "@type": "CollegeOrUniversity",
+                  name: "Chalmers University of Technology",
+                },
+                {
+                  "@type": "CollegeOrUniversity",
+                  name: "R.V. College of Engineering",
+                },
+              ],
+              knowsAbout: [
+                "Machine Learning",
+                "Generative AI",
+                "Data Science",
+                "MLOps",
+                "Deep Learning",
+                "Python",
+                "Robotics",
+              ],
+              sameAs: [
+                "https://www.linkedin.com/in/himanshu-sahni07/",
+                "https://github.com/hsahni55h",
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Gothenburg",
+                addressCountry: "SE",
+              },
+            }),
+          }}
+        />
       </head>
       <body className="min-h-screen">
         <Script
