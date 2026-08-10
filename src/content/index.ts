@@ -10,6 +10,8 @@ export { education } from "./education";
 export type { Education } from "./education";
 export { projects } from "./projects";
 export type { Project } from "./projects";
+export { openSourceProjects } from "./opensource";
+export type { OpenSourceProject } from "./opensource";
 export { skills } from "./skills";
 export { certifications } from "./certifications";
 export type { Certification } from "./certifications";

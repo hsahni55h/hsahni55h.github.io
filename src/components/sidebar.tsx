@@ -95,6 +95,17 @@ function LinkedInIcon() {
   );
 }
 
+function GitForkIcon() {
+  return (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="18" r="3" />
+      <circle cx="6" cy="6" r="3" />
+      <circle cx="18" cy="6" r="3" />
+      <path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9M12 12v3" />
+    </svg>
+  );
+}
+
 // ── Nav items ───────────────────────────────────────────────
 const navItems = [
   { href: "/", label: "Home", icon: <HomeIcon /> },
@@ -102,6 +113,7 @@ const navItems = [
   { href: "/experience", label: "Experience", icon: <BriefcaseIcon /> },
   { href: "/education", label: "Education", icon: <GradCapIcon /> },
   { href: "/projects", label: "Projects", icon: <CodeIcon /> },
+  { href: "/open-source", label: "Open Source", icon: <GitForkIcon /> },
   { href: "/skills", label: "Skills", icon: <ZapIcon /> },
   { href: "/certifications", label: "Certifications", icon: <AwardIcon /> },
   { href: "/contact", label: "Contact", icon: <MailIcon /> },
