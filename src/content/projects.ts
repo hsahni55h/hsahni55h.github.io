@@ -10,28 +10,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "auto-ml",
-    title: "Automated Machine Learning Deployment and Prediction Pipeline",
-    techStack: ["Python", "Flask", "Docker", "GitHub Actions", "AWS ECS", "MLflow"],
-    period: "Apr 2024 – May 2024",
-    bullets: [
-      "Developed and deployed a Flask web application to predict wine quality scores, utilizing Docker for containerization and MLflow for experiment tracking and model management.",
-      "Implemented automated CI/CD workflows with GitHub Actions and deployed on AWS ECS, ensuring scalable and consistent updates across different environments.",
-    ],
-    github: "https://github.com/hsahni55h/end-to-end-ML-with-MLflow",
-  },
-  {
-    id: "diamond-price",
-    title: "Machine Learning-Driven Diamond Price Estimation",
-    techStack: ["Python", "Flask", "Regression Models", "AWS Elastic Beanstalk", "Azure"],
-    period: "Apr 2024 – May 2024",
-    bullets: [
-      "Developed and deployed a Flask web application to predict diamond prices using various regression models, including Random Forest, Gradient Boosting, and CatBoost.",
-      "Implemented hyperparameter tuning using RandomizedSearchCV and GridSearchCV, and automated deployment with CI/CD pipeline on AWS Elastic Beanstalk and Microsoft Azure.",
-    ],
-    github: "https://github.com/hsahni55h/mlproject-Gemstone-Price-Prediction",
-  },
-  {
     id: "robot-scheduling",
     title: "Time-Constrained Scheduling and Collision-Free Control for A Fleet of Mobile Robots",
     techStack: ["Python", "Gurobi", "Z3", "MPC", "CasADi"],
