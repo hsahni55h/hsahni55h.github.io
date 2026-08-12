@@ -184,7 +184,7 @@ export function Projects() {
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="space-y-5">
           {projects.map((project, i) => (
             <motion.article
               key={project.id}

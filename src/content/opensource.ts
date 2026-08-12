@@ -18,6 +18,14 @@ export const openSourceProjects: OpenSourceProject[] = [
     quickStart: "git clone https://github.com/hsahni55h/Model-Context-Protocol-MCP-.git",
   },
   {
+    title: "AI Agents Toolkit",
+    description:
+      "Coming soon — a unified toolkit for building AI agents across multiple frameworks. Covers AutoGen, LangChain, and LangGraph with hands-on examples, patterns, and a real-world project to tie it all together.",
+    repo: "",
+    tech: ["AutoGen", "LangChain", "LangGraph", "Python"],
+    status: "coming-soon",
+  },
+  {
     title: "GenAI Starter Kit",
     description:
       "Coming soon — a production-ready starter template for building GenAI applications.",

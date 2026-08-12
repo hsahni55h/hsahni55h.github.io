@@ -46,7 +46,7 @@ export function OpenSource() {
           Fork them, customize them, and ship faster.
         </motion.p>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="space-y-5">
           {openSourceProjects.map((project, i) => (
             <motion.div
               key={i}
