@@ -13,7 +13,7 @@ export const openSourceProjects: OpenSourceProject[] = [
     description:
       "Python toolkit for building multi-agent AI applications using the Model Context Protocol. Connect any LLM to external tools and APIs, define specialist agents in a few lines, and let the toolkit handle the rest.",
     repo: "https://github.com/hsahni55h/Model-Context-Protocol-MCP-",
-    tech: ["Python", "MCP", "Multi-Agent", "LLM"],
+    tech: [],
     status: "active",
     quickStart: "git clone https://github.com/hsahni55h/Model-Context-Protocol-MCP-.git",
   },
@@ -22,7 +22,7 @@ export const openSourceProjects: OpenSourceProject[] = [
     description:
       "Coming soon — a unified toolkit for building AI agents across multiple frameworks. Covers AutoGen, LangChain, and LangGraph with hands-on examples, patterns, and a real-world project to tie it all together.",
     repo: "",
-    tech: ["AutoGen", "LangChain", "LangGraph", "Python"],
+    tech: [],
     status: "coming-soon",
   },
   {
