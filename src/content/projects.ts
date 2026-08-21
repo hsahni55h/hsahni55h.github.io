@@ -10,6 +10,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "mcp-toolkit",
+    title: "MCP Toolkit",
+    techStack: ["Python", "MCP", "LLM", "Multi-Agent"],
+    period: "2025",
+    bullets: [
+      "Python toolkit for building multi-agent AI applications using the Model Context Protocol.",
+      "Connect any LLM to external tools and APIs, define specialist agents in a few lines, and let the toolkit handle the rest.",
+    ],
+    github: "https://github.com/hsahni55h/Model-Context-Protocol-MCP-",
+  },
+  {
     id: "robot-scheduling",
     title: "Time-Constrained Scheduling and Collision-Free Control for A Fleet of Mobile Robots",
     techStack: ["Python", "Gurobi", "Z3", "MPC", "CasADi"],
