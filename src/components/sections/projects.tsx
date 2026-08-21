@@ -76,9 +76,11 @@ function ProjectModal({
             <h3 className="text-xl font-bold text-white leading-tight">
               {project.title}
             </h3>
-            <p className="text-xs font-mono text-cyber-green mt-1 tracking-[2px]">
-              {project.period}
-            </p>
+            {project.period && (
+              <p className="text-xs font-mono text-cyber-green mt-1 tracking-[2px]">
+                {project.period}
+              </p>
+            )}
           </div>
           <div className="flex items-center gap-2 shrink-0">
             {project.github && (
@@ -197,9 +199,11 @@ export function Projects() {
             >
               {/* Top row: icons for available content */}
               <div className="flex items-center justify-between mb-3">
-                <span className="inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[1px]">
-                  {project.period}
-                </span>
+                {project.period && (
+                  <span className="inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[1px]">
+                    {project.period}
+                  </span>
+                )}
                 <div className="flex items-center gap-2 text-cyber-muted">
                   {project.videos && project.videos.length > 0 && (
                     <span title="Has demo video">

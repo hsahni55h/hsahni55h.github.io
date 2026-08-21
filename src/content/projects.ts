@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   techStack: string[];
-  period: string;
+  period?: string;
   bullets: string[];
   github?: string;
   videos?: string[];
@@ -13,7 +13,6 @@ export const projects: Project[] = [
     id: "mcp-toolkit",
     title: "MCP Toolkit",
     techStack: ["Python", "MCP", "LLM", "Multi-Agent"],
-    period: "2025",
     bullets: [
       "Python toolkit for building multi-agent AI applications using the Model Context Protocol.",
       "Connect any LLM to external tools and APIs, define specialist agents in a few lines, and let the toolkit handle the rest.",
