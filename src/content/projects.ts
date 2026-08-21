@@ -12,10 +12,13 @@ export const projects: Project[] = [
   {
     id: "mcp-toolkit",
     title: "MCP Toolkit",
-    techStack: ["Python", "MCP", "LLM", "Multi-Agent"],
+    techStack: ["Python", "MCP", "OpenAI", "Gemini", "Claude", "LangChain", "Docker", "SSE"],
     bullets: [
-      "Python toolkit for building multi-agent AI applications using the Model Context Protocol.",
-      "Connect any LLM to external tools and APIs, define specialist agents in a few lines, and let the toolkit handle the rest.",
+      "Built a Python package on the Model Context Protocol (MCP) providing pre-built, plug-and-play components for production-level AI agent applications — eliminating boilerplate setup.",
+      "Implemented multi-LLM support with unified clients for OpenAI, Gemini, Claude, and LangChain, enabling provider swaps through a single consistent interface.",
+      "Automated server lifecycle management, tool discovery, and the tool-calling loop so developers can focus on agent logic instead of infrastructure plumbing.",
+      "Designed a multi-server architecture allowing one agent to connect to multiple MCP servers via simple configuration.",
+      "Supported flexible deployment modes including local scripts, self-hosted HTTP servers, and Docker containers.",
     ],
     github: "https://github.com/hsahni55h/Model-Context-Protocol-MCP-",
   },
