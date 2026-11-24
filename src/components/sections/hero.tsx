@@ -43,7 +43,7 @@ export function Hero() {
   }, [displayText, isDeleting, taglineIndex]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] md:min-h-screen text-center px-6 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center hero-min-h text-center px-6 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

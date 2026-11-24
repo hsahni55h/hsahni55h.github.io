@@ -67,7 +67,7 @@ function ProjectModal({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl border border-cyber-border bg-[#050f1f] shadow-2xl"
+        className="relative w-full max-w-2xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain rounded-2xl border border-cyber-border bg-[#050f1f] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -88,7 +88,7 @@ function ProjectModal({
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-cyber-muted hover:text-cyber-cyan border border-cyber-border hover:border-cyber-cyan transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 pointer-coarse:min-h-11 rounded-lg text-xs font-medium text-cyber-muted hover:text-cyber-cyan border border-cyber-border hover:border-cyber-cyan transition-colors"
               >
                 <GitHubIcon />
                 Code
@@ -97,7 +97,7 @@ function ProjectModal({
             )}
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-cyber-muted hover:text-cyber-cyan hover:bg-white/5 transition-colors"
+              className="p-2 pointer-coarse:p-3 rounded-lg text-cyber-muted hover:text-cyber-cyan hover:bg-white/5 transition-colors"
               aria-label="Close"
             >
               <CloseIcon />
@@ -233,20 +233,20 @@ export function Projects() {
                 {project.techStack.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
-                    className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
+                    className="text-xs lg:text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
                   >
                     {tech}
                   </span>
                 ))}
                 {project.techStack.length > 4 && (
-                  <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]">
+                  <span className="text-xs lg:text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]">
                     +{project.techStack.length - 4}
                   </span>
                 )}
               </div>
 
               {/* Click hint */}
-              <p className="mt-3 text-[11px] text-cyber-muted/60 font-mono group-hover:text-cyber-cyan/60 transition-colors tracking-[1px]">
+              <p className="mt-3 text-xs lg:text-[11px] text-cyber-muted/60 font-mono group-hover:text-cyber-cyan/60 transition-colors tracking-[1px]">
                 Click to view details →
               </p>
             </motion.article>

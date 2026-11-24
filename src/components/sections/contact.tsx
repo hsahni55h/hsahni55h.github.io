@@ -77,7 +77,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block font-mono text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
+                  className="block font-mono text-xs lg:text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
                 >
                   {"// Name"}
                 </label>
@@ -87,13 +87,13 @@ export function Contact() {
                   name="name"
                   required
                   placeholder="Your name"
-                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
+                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block font-mono text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
+                  className="block font-mono text-xs lg:text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
                 >
                   {"// Email"}
                 </label>
@@ -103,7 +103,7 @@ export function Contact() {
                   name="email"
                   required
                   placeholder="you@example.com"
-                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
+                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
                 />
               </div>
             </div>
@@ -111,7 +111,7 @@ export function Contact() {
             <div>
               <label
                 htmlFor="subject"
-                className="block font-mono text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
+                className="block font-mono text-xs lg:text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
               >
                 {"// Subject"}
               </label>
@@ -121,14 +121,14 @@ export function Contact() {
                 name="subject"
                 required
                 placeholder="What is this about?"
-                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
+                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
               />
             </div>
 
             <div>
               <label
                 htmlFor="message"
-                className="block font-mono text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
+                className="block font-mono text-xs lg:text-[0.6rem] text-cyber-muted tracking-[3px] uppercase mb-2"
               >
                 {"// Message"}
               </label>
@@ -138,7 +138,7 @@ export function Contact() {
                 required
                 rows={5}
                 placeholder="Tell me about your project, opportunity, or just say hi..."
-                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-sm focus:outline-none focus:border-cyber-cyan transition-colors resize-none font-sans"
+                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors resize-none font-sans"
               />
             </div>
 
@@ -190,7 +190,7 @@ export function Contact() {
               </h3>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="text-sm text-[#cce8ff] font-medium hover:text-cyber-cyan transition-colors break-all font-mono tracking-[1px]"
+                className="inline-block py-3 -my-3 text-sm text-[#cce8ff] font-medium hover:text-cyber-cyan transition-colors break-all font-mono tracking-[1px]"
               >
                 {siteConfig.email}
               </a>
@@ -201,12 +201,12 @@ export function Contact() {
               <h3 className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
                 {"// Links"}
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-1">
                 <a
                   href={siteConfig.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-cyber-muted font-mono tracking-[1px] hover:text-cyber-cyan transition-colors"
+                  className="flex items-center gap-3 py-1 text-sm text-cyber-muted font-mono tracking-[1px] hover:text-cyber-cyan transition-colors"
                 >
                   <span className="w-9 h-9 border border-cyber-border flex items-center justify-center text-base hover:border-cyber-cyan transition-colors">in</span>
                   linkedin.com/in/himanshu-sahni07
@@ -215,7 +215,7 @@ export function Contact() {
                   href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-cyber-muted font-mono tracking-[1px] hover:text-cyber-cyan transition-colors"
+                  className="flex items-center gap-3 py-1 text-sm text-cyber-muted font-mono tracking-[1px] hover:text-cyber-cyan transition-colors"
                 >
                   <span className="w-9 h-9 border border-cyber-border flex items-center justify-center text-base hover:border-cyber-cyan transition-colors">⌥</span>
                   github.com/hsahni55h

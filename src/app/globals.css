@@ -40,6 +40,16 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+/* Full-height hero: vh fallback, then svh so iOS Safari's toolbar doesn't hide content or cause jumps */
+@utility hero-min-h {
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100svh - 4rem);
+  @media (width >= 48rem) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+}
+
 /* Hide native cursor when custom cursor is active (desktop only) */
 @media (pointer: fine) {
   .custom-cursor-active,

@@ -123,7 +123,7 @@ export function Sidebar() {
             <Link
               href={item.href}
               onClick={onNavigate}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`flex items-center gap-3 px-3 py-2.5 pointer-coarse:py-3 rounded-lg text-sm font-medium transition-colors ${
                 isActive
                   ? "text-cyber-cyan bg-cyber-cyan/10"
                   : "text-cyber-muted hover:text-cyber-cyan hover:bg-white/5"
@@ -195,15 +195,16 @@ export function Sidebar() {
       <header className="md:hidden fixed top-0 left-0 right-0 h-16 z-50 flex items-center justify-between px-4 border-b border-cyber-border bg-[#020916]/90 backdrop-blur-md">
         <Link
           href="/"
-          className="text-lg font-bold tracking-tight font-mono text-cyber-cyan"
+          className="py-2 text-lg font-bold tracking-tight font-mono text-cyber-cyan"
         >
           HS<span className="text-cyber-green">::</span>PORT
         </Link>
         <div className="flex items-center gap-3">
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex flex-col gap-1.5 p-2"
+            className="flex flex-col items-center justify-center gap-1.5 w-11 h-11 -mr-2"
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
           >
             <span
               className={`block w-5 h-0.5 bg-cyber-cyan transition-transform ${
@@ -262,13 +263,13 @@ export function Sidebar() {
               </div>
 
               {/* Social */}
-              <div className="px-4 py-4 border-t border-cyber-border">
-                <div className="flex items-center gap-3">
+              <div className="px-2 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] border-t border-cyber-border">
+                <div className="flex items-center gap-1">
                   <a
                     href={siteConfig.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-cyber-muted hover:text-cyber-cyan transition-colors"
+                    className="flex items-center justify-center w-11 h-11 text-cyber-muted hover:text-cyber-cyan transition-colors"
                     aria-label="GitHub"
                   >
                     <GitHubIcon />
@@ -277,14 +278,14 @@ export function Sidebar() {
                     href={siteConfig.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-cyber-muted hover:text-cyber-cyan transition-colors"
+                    className="flex items-center justify-center w-11 h-11 text-cyber-muted hover:text-cyber-cyan transition-colors"
                     aria-label="LinkedIn"
                   >
                     <LinkedInIcon />
                   </a>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="text-cyber-muted hover:text-cyber-cyan transition-colors"
+                    className="flex items-center justify-center w-11 h-11 text-cyber-muted hover:text-cyber-cyan transition-colors"
                     aria-label="Email"
                   >
                     <MailIcon />
