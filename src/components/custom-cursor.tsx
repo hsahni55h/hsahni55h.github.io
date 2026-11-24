@@ -79,7 +79,7 @@ export function CustomCursor() {
     <>
       <div
         ref={dotRef}
-        className="fixed w-2.5 h-2.5 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-transform duration-100"
+        className="hidden pointer-fine:block fixed w-2.5 h-2.5 rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-transform duration-100"
         style={{
           background: "#00f5ff",
           boxShadow: "0 0 20px rgba(0,245,255,0.4)",
@@ -87,7 +87,7 @@ export function CustomCursor() {
       />
       <div
         ref={ringRef}
-        className="fixed w-9 h-9 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2"
+        className="hidden pointer-fine:block fixed w-9 h-9 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2"
         style={{
           border: "1px solid rgba(0,245,255,0.5)",
           transition:

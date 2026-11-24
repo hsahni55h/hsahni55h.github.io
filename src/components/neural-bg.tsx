@@ -8,6 +8,7 @@ import * as THREE from "three";
 const NODE_COUNT = 80;
 const MAX_DIST = 18;
 const PARTICLE_COUNT = 250;
+const PARTICLE_COUNT_SMALL = 90;
 
 export function NeuralBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -16,12 +17,19 @@ export function NeuralBackground() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Phones/tablets: fewer particles and a lower pixel ratio to save GPU and battery
+    const isSmall = window.matchMedia(
+      "(max-width: 767px), (pointer: coarse)"
+    ).matches;
+    const particleCount = isSmall ? PARTICLE_COUNT_SMALL : PARTICLE_COUNT;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
       alpha: true,
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isSmall ? 1.5 : 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const scene = new THREE.Scene();
@@ -86,8 +94,8 @@ export function NeuralBackground() {
 
     // ── Particles ───────────────────────────────────────
     const partGeo = new THREE.BufferGeometry();
-    const partPos = new Float32Array(PARTICLE_COUNT * 3);
-    for (let i = 0; i < PARTICLE_COUNT * 3; i++) {
+    const partPos = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount * 3; i++) {
       partPos[i] = (Math.random() - 0.5) * 120;
     }
     partGeo.setAttribute("position", new THREE.BufferAttribute(partPos, 3));
@@ -111,7 +119,7 @@ export function NeuralBackground() {
 
     // ── Animation loop ──────────────────────────────────
     const clocks = nodes.map(() => Math.random() * Math.PI * 2);
-    let animId: number;
+    let animId: number | null = null;
 
     function render() {
       animId = requestAnimationFrame(render);
@@ -134,18 +142,40 @@ export function NeuralBackground() {
       particles.rotation.y += 0.0004;
       renderer.render(scene, camera);
     }
-    render();
+
+    const start = () => {
+      if (animId === null) render();
+    };
+    const stop = () => {
+      if (animId !== null) cancelAnimationFrame(animId);
+      animId = null;
+    };
+    // Static frame for reduced motion; pause the loop while the tab is hidden
+    const sync = () => {
+      if (reducedMotion.matches || document.hidden) {
+        stop();
+        renderer.render(scene, camera);
+      } else {
+        start();
+      }
+    };
+    sync();
+    document.addEventListener("visibilitychange", sync);
+    reducedMotion.addEventListener("change", sync);
 
     const onResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      if (animId === null) renderer.render(scene, camera);
     };
     window.addEventListener("resize", onResize);
 
     return () => {
-      cancelAnimationFrame(animId);
+      stop();
       document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("visibilitychange", sync);
+      reducedMotion.removeEventListener("change", sync);
       window.removeEventListener("resize", onResize);
       renderer.dispose();
     };
