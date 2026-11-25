@@ -10,7 +10,7 @@ export { education } from "./education";
 export type { Education } from "./education";
 export { projects } from "./projects";
 export type { Project } from "./projects";
-export { skills } from "./skills";
+export { skills, type SkillCategory, type SkillSubgroup } from "./skills";
 export { certifications } from "./certifications";
 export type { Certification } from "./certifications";
 export { journey } from "./journey";
