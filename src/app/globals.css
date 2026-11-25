@@ -31,7 +31,15 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  /* Clears the fixed mobile top bar (h-16) for hash links. Must not exceed the content's top
+     offset, or Next.js treats the page top as hidden and scrolls to a later section on navigation. */
+  scroll-padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 0;
+  }
 }
 
 body {
