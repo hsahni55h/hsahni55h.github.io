@@ -21,7 +21,7 @@ function Milestone({
   reduceMotion: boolean;
 }) {
   const ref = useRef<HTMLLIElement>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -35% 0px" });
+  const inView = useInView(ref, { once: true, margin: "0px 0px -15% 0px" });
   const active = reduceMotion || inView;
   const right = index % 2 === 1;
 
@@ -114,7 +114,7 @@ export function Journey() {
         </motion.div>
 
         <div ref={trackRef} className="relative">
-          <ScrollRail targetRef={trackRef} reduceMotion={reduceMotion} className="left-2 md:left-1/2" />
+          <ScrollRail targetRef={trackRef} reduceMotion={reduceMotion} className="left-2 md:left-1/2" nodeOffset={28} />
           <ol className="space-y-6 md:space-y-10">
             {journey.map((m, i) => (
               <Milestone key={`${m.year}-${m.title}`} m={m} index={i} reduceMotion={reduceMotion} />
@@ -122,18 +122,12 @@ export function Journey() {
           </ol>
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row gap-3 sm:justify-center">
+        <div className="mt-12 flex justify-center">
           <Link
             href="/experience"
             className="min-h-11 inline-flex items-center justify-center px-5 rounded-md bg-cyber-cyan/10 border border-cyber-cyan/40 text-cyber-cyan text-xs font-mono uppercase tracking-[3px] hover:bg-cyber-cyan/20 transition-colors"
           >
             Full experience timeline →
-          </Link>
-          <Link
-            href="/education"
-            className="min-h-11 inline-flex items-center justify-center px-5 rounded-md border border-cyber-border text-[#cce8ff]/80 text-xs font-mono uppercase tracking-[3px] hover:border-cyber-cyan/40 transition-colors"
-          >
-            Education →
           </Link>
         </div>
       </div>

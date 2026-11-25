@@ -69,7 +69,7 @@ export const journey: JourneyMilestone[] = [
     kind: "work",
     title: "Data Scientist",
     org: "Volvo Group",
-    blurb: "Enterprise ML and GenAI in production for Volvo Trucks and Volvo Penta.",
+    blurb: "Enterprise ML and GenAI systems for Volvo Group warranty and quality, from prototype to production.",
     href: "/experience",
     current: true,
   },

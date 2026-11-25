@@ -39,7 +39,7 @@ function TimelineItem({
   reduceMotion: boolean;
 }) {
   const ref = useRef<HTMLLIElement>(null);
-  const inView = useInView(ref, { once: true, margin: "0px 0px -35% 0px" });
+  const inView = useInView(ref, { once: true, margin: "0px 0px -15% 0px" });
   const active = reduceMotion || inView;
   const panelId = useId();
   const current = /present/i.test(exp.period);
@@ -184,7 +184,7 @@ export function Experience() {
         </div>
 
         <div ref={trackRef} className="relative">
-          <ScrollRail targetRef={trackRef} reduceMotion={reduceMotion} className="left-2 sm:left-4" />
+          <ScrollRail targetRef={trackRef} reduceMotion={reduceMotion} className="left-2 sm:left-4" nodeOffset={32} />
 
           <ol className="space-y-5">
             {experiences.map((exp, i) => (
