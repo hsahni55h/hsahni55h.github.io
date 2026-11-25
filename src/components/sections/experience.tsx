@@ -95,19 +95,6 @@ function TimelineItem({
             <p className="mt-3 text-sm text-[#cce8ff]/80 leading-relaxed">{exp.summary}</p>
           )}
 
-          {exp.metrics && exp.metrics.length > 0 && (
-            <div className="mt-3 flex flex-wrap gap-2">
-              {exp.metrics.map((m) => (
-                <span
-                  key={m}
-                  className="text-xs font-mono text-cyber-cyan/90 bg-cyber-cyan/5 border border-cyber-cyan/20 px-2.5 py-1 rounded-md"
-                >
-                  {m}
-                </span>
-              ))}
-            </div>
-          )}
-
           <span className="mt-4 flex items-center gap-2 text-xs font-mono uppercase tracking-[3px] text-cyber-muted">
             <span
               aria-hidden="true"

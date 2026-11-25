@@ -15,5 +15,3 @@ export { certifications } from "./certifications";
 export type { Certification } from "./certifications";
 export { journey } from "./journey";
 export type { JourneyMilestone } from "./journey";
-export { impactStats } from "./impact";
-export type { ImpactStat } from "./impact";

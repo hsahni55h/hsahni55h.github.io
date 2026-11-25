@@ -130,10 +130,10 @@ export function Journey() {
             Full experience timeline →
           </Link>
           <Link
-            href="/about"
+            href="/education"
             className="min-h-11 inline-flex items-center justify-center px-5 rounded-md border border-cyber-border text-[#cce8ff]/80 text-xs font-mono uppercase tracking-[3px] hover:border-cyber-cyan/40 transition-colors"
           >
-            The longer story →
+            Education →
           </Link>
         </div>
       </div>

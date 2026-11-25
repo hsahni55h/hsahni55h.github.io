@@ -2,15 +2,7 @@
 // https://github.com/hsahni55h/hsahni55h.github.io — Attribution required.
 
 import { Hero } from "@/components/sections/hero";
-import { ImpactStrip } from "@/components/sections/impact-strip";
-import { Journey } from "@/components/sections/journey";
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <ImpactStrip />
-      <Journey />
-    </>
-  );
+  return <Hero />;
 }

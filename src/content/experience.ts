@@ -10,8 +10,6 @@ export interface Experience {
   period: string;
   /** One-line impact summary shown while the timeline card is collapsed. */
   summary?: string;
-  /** Short highlight chips (2–3) shown while collapsed. */
-  metrics?: string[];
   bullets?: string[];
   projects?: ExperienceProject[];
 }
@@ -22,9 +20,8 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Data Scientist",
     period: "September 2024 – Present",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Enterprise ML and GenAI systems for Volvo Group warranty and quality, from prototype to production.",
-    metrics: ["Weibull 20–30 → 1–2 min", "Volvo Trucks · Volvo Penta", "Azure Databricks · MLflow"],
     projects: [
       {
         title: "Warranty AI — Volvo Trucks",
@@ -53,9 +50,8 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Summer Intern",
     period: "June 2024 – September 2024",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Turned truck telemetry and GPS data into driver-behaviour insights for fuel and fleet efficiency.",
-    metrics: ["Telemetry + GPS", "Fuel efficiency"],
     bullets: [
       "Analyzed real-world truck usage data, combining vehicle telemetry with GPS data across variables such as terrain, load, temperature, and driving location, to identify patterns in driver behavior. Derived actionable insights and recommendations to improve driving patterns, supporting improvements in fuel efficiency and fleet efficiency.",
     ],
@@ -65,9 +61,8 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Master Thesis Worker",
     period: "January 2024 – June 2024",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Built a GenAI agent tool that analyses truck ECU logs through natural language.",
-    metrics: ["Code Llama 2 · Mixtral 8x7B", "Agent-based LLMs", "Led to full-time offer"],
     bullets: [
       "Built a GenAI-powered analysis tool for the Powertrain department to analyze logged vehicle data from truck ECUs stored in MF4 files, enabling users to run complex analyses via natural-language interaction rather than manual data processing.",
       "Developed and implemented agent-based architectures using open-source large language models, including Code Llama 2 and Mixtral 8x7B, to analyze industrial logged data and enable natural language interaction with the system.",
@@ -80,9 +75,8 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Teaching Assistant — Autonomous Vehicular Systems",
     period: "October 2023 – January 2024",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Taught ROS for cooperative vehicular systems and built a teach-and-repeat algorithm for the Wifibot.",
-    metrics: ["ROS", "DAT295"],
     bullets: [
       "Instructed students on ROS for Autonomous Cooperative Vehicular Systems (DAT295) and developed a teach-and-repeat algorithm for the Wifibot to enable autonomous trajectory following.",
     ],
@@ -92,9 +86,8 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Project Intern — AI/Robotics Lab",
     period: "June 2023 – July 2023",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Built localization and mapping for the TIAGO robot in office environments.",
-    metrics: ["TIAGO robot", "Sim + real-world testing"],
     bullets: [
       "Developed a localization and mapping system for the TIAGO robot to autonomously identify its location within office environments under Dr. Karinne Ramirez.",
       "Led comprehensive testing of robot functionalities in both simulation and real-world scenarios; documented and resolved bugs to ensure optimal performance.",
@@ -105,9 +98,8 @@ export const experiences: Experience[] = [
     location: "Gothenburg, Sweden",
     role: "Teaching Assistant — Robotics",
     period: "February 2023 – July 2023",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Guided bachelor students on autonomous robot architectures and implemented SLAM on the Wifibot.",
-    metrics: ["6 students guided", "ORB-SLAM3 · Gmapping"],
     bullets: [
       "Guided 6 bachelor students in using ROS to design indoor autonomous robot architectures and motion planning algorithms.",
       "Implemented advanced SLAM algorithms (TAG Slam, ORB-SLAM3, Gmapping) on Wifibot with RGB camera and LiDAR for trajectory and map generation.",
@@ -119,9 +111,8 @@ export const experiences: Experience[] = [
     location: "Gurugram, India",
     role: "Robotics Software Engineer",
     period: "September 2020 – June 2022",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "Built SLAM and motion planning for autonomous mobile robots and ported the navigation stack to ROS2.",
-    metrics: ["ROS2 · NAV2", "AWS RoboMaker", "LiDAR · IMU · sonar"],
     bullets: [
       "Implemented SLAM and online motion planning algorithms (TEB, DWA) for autonomous mobile robots, interfacing with sonars, LiDAR, IMU, and wheel encoders.",
       "Developed scalable robotics applications leveraging AWS RoboMaker, extending the ROS framework with cloud services.",
@@ -134,9 +125,8 @@ export const experiences: Experience[] = [
     location: "India",
     role: "Data Scientist — Freelance",
     period: "January 2021 – February 2022",
-    // TODO confirm: summary and metrics paraphrased from the bullets below.
+    // TODO confirm: summary paraphrased from the bullets below.
     summary: "A/B testing for digital advertising and ARIMA demand forecasting for inventory.",
-    metrics: ["A/B testing", "ARIMA forecasting"],
     bullets: [
       "Conducted A/B testing to optimize digital advertising strategies, implementing data-driven improvements that significantly enhanced user engagement and campaign performance.",
       "Utilized ARIMA models to forecast demand spikes, optimizing inventory for peak periods and minimizing overstock and stockouts.",
