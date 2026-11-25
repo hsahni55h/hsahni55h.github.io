@@ -86,7 +86,7 @@ function TimelineItem({
                 {exp.company} · {exp.location}
               </p>
             </div>
-            <span className="self-start inline-block text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full sm:whitespace-nowrap tracking-[2px]">
+            <span className="self-start inline-block text-xs font-mono date-pill px-3 py-1 rounded-full sm:whitespace-nowrap tracking-[2px]">
               {exp.period}
             </span>
           </div>

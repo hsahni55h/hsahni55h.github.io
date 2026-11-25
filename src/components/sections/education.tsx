@@ -41,7 +41,7 @@ export function Education() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full tracking-[3px]">
+                  <span className="inline-block text-xs font-mono date-pill px-3 py-1 rounded-full tracking-[3px]">
                     {edu.period}
                   </span>
                   <p className="text-xs text-cyber-muted mt-1">

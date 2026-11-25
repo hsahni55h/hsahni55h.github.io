@@ -85,7 +85,6 @@ export const skills: SkillCategory[] = [
       },
       { label: "APIs & backend", items: ["FastAPI", "Flask", "REST APIs", "SSE", "Pydantic", "SQLAlchemy"] },
       { label: "Observability & testing", items: ["OpenTelemetry", "Azure Monitor", "pytest"] },
-      { label: "Auth & security", items: ["Microsoft Entra ID (MSAL)"] },
       { label: "Frontend", items: ["React", "TypeScript", "Vite", "Next.js"] },
     ],
   },
