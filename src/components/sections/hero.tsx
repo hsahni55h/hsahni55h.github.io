@@ -75,6 +75,17 @@ export function Hero() {
 
 
       </motion.div>
+
+      <motion.a
+        href="#impact"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4, duration: 0.6 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 min-h-11 flex flex-col items-center justify-end gap-2 px-4 whitespace-nowrap text-xs font-mono uppercase tracking-[4px] text-cyber-muted hover:text-cyber-cyan transition-colors"
+      >
+        Begin the journey
+        <span aria-hidden="true" className="block h-8 w-px bg-gradient-to-b from-cyber-cyan to-transparent animate-pulse-dot" />
+      </motion.a>
     </section>
   );
 }

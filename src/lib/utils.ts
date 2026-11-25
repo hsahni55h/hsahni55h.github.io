@@ -2,3 +2,6 @@
 // https://github.com/hsahni55h/hsahni55h.github.io — Attribution required.
 
 // Utility functions barrel export
+export function cn(...classes: Array<string | false | null | undefined>): string {
+  return classes.filter(Boolean).join(" ");
+}
