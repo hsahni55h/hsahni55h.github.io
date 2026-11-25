@@ -15,7 +15,7 @@ export function Education() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           Education
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
@@ -33,15 +33,15 @@ export function Education() {
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div>
-                  <h3 className="text-lg font-bold text-white">
+                  <h3 className="text-lg font-bold text-heading">
                     {edu.degree} — {edu.field}
                   </h3>
-                  <p className="text-sm text-cyber-cyan mt-1 font-medium tracking-[1px]">
+                  <p className="text-sm text-foreground mt-1 font-medium tracking-[1px]">
                     {edu.institution}
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[3px]">
+                  <span className="inline-block text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full tracking-[3px]">
                     {edu.period}
                   </span>
                   <p className="text-xs text-cyber-muted mt-1">
@@ -52,14 +52,14 @@ export function Education() {
 
               {edu.courses && (
                 <div className="mt-4 pt-4 border-t border-cyber-border">
-                  <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
+                  <p className="text-xs font-mono text-cyber-muted uppercase tracking-[3px] mb-3">
                     Key Coursework
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {edu.courses.map((course) => (
                       <span
                         key={course}
-                        className="text-xs px-2.5 py-1 rounded-full border border-cyber-border text-[#cce8ff]/70 font-mono tracking-[1px] hover:border-cyber-green hover:text-cyber-green transition-colors"
+                        className="chip text-xs px-2.5 py-1 rounded-full font-mono tracking-[0.5px] hover:border-cyber-cyan/50 transition-colors"
                       >
                         {course}
                       </span>

@@ -16,8 +16,8 @@ export const skills: SkillCategory[] = [
   {
     id: "data",
     title: "Data Engineering & Cloud",
-    // TODO confirm: blurb paraphrased from the Volvo Group experience bullets.
-    blurb: "Building feature, data and ML pipelines in Azure Databricks for Volvo Group warranty and quality.",
+    // TODO confirm: general wording, edit freely.
+    blurb: "Designing scalable data and feature pipelines on lakehouse platforms and the cloud.",
     groups: [
       { label: "Platforms", items: ["Azure Databricks", "Unity Catalog", "Delta Lake", "Databricks SQL"] },
       { label: "Processing", items: ["PySpark", "ETL/ELT pipelines"] },
@@ -28,8 +28,8 @@ export const skills: SkillCategory[] = [
   {
     id: "genai",
     title: "Generative AI & Agents",
-    // TODO confirm: blurb paraphrased from the experience bullets.
-    blurb: "Building GenAI-powered agents for warranty claim evaluation, root cause analysis and log analysis.",
+    // TODO confirm: general wording, edit freely.
+    blurb: "Building LLM-powered agents and retrieval systems that work on real business data.",
     groups: [
       { label: "Agents", items: ["LangChain", "LangGraph", "AutoGen", "MCP", "Multi-agent systems"] },
       { label: "Retrieval", items: ["RAG", "Embeddings", "Vector search"] },
@@ -42,12 +42,22 @@ export const skills: SkillCategory[] = [
   {
     id: "ml",
     title: "Machine Learning & Data Science",
-    // TODO confirm: blurb paraphrased from the experience bullets.
-    blurb: "Training, serving and monitoring ML models, from defect prediction to demand forecasting.",
+    // TODO confirm: general wording, edit freely.
+    blurb: "Training, deploying and monitoring ML models, from prediction to time-series forecasting.",
     groups: [
       {
         label: "Frameworks",
-        items: ["PyTorch", "TensorFlow", "Scikit-learn", "XGBoost", "Pandas", "NumPy", "MLflow"],
+        items: [
+          "PyTorch",
+          "TensorFlow",
+          "Scikit-learn",
+          "XGBoost",
+          "statsmodels",
+          "Nixtla",
+          "Pandas",
+          "NumPy",
+          "MLflow",
+        ],
       },
       {
         label: "Areas",
@@ -67,19 +77,22 @@ export const skills: SkillCategory[] = [
     id: "devops",
     title: "DevOps & MLOps",
     // TODO confirm: blurb written from the skill list.
-    blurb: "Containerising, deploying and automating ML services and the APIs around them.",
+    blurb: "Containerising, deploying and monitoring ML services, plus the APIs and front ends around them.",
     groups: [
       {
         label: "Infrastructure & CI/CD",
         items: ["Docker", "Kubernetes", "Terraform", "Azure DevOps", "GitHub Actions", "CI/CD", "Git"],
       },
-      { label: "APIs", items: ["FastAPI", "Flask", "REST APIs", "SSE"] },
+      { label: "APIs & backend", items: ["FastAPI", "Flask", "REST APIs", "SSE", "Pydantic", "SQLAlchemy"] },
+      { label: "Observability & testing", items: ["OpenTelemetry", "Azure Monitor", "pytest"] },
+      { label: "Auth & security", items: ["Microsoft Entra ID (MSAL)"] },
+      { label: "Frontend", items: ["React", "TypeScript", "Vite", "Next.js"] },
     ],
   },
   {
     id: "robotics",
     title: "Robotics & Control",
-    // TODO confirm: blurb paraphrased from the robotics experience bullets.
+    // TODO confirm: general wording, edit freely.
     blurb: "SLAM, motion planning and autonomous navigation for mobile robots, from research to teaching.",
     groups: [
       {

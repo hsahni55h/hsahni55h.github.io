@@ -56,7 +56,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-heading"
         >
           {siteConfig.name}
         </motion.h1>

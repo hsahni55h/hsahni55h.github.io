@@ -78,7 +78,7 @@ function CategoryCard({ category, index }: { category: SkillCategory; index: num
         <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-lg border border-cyber-cyan/30 bg-cyber-cyan/5 text-cyber-cyan">
           <CategoryIcon id={category.id} />
         </span>
-        <h3 className="min-w-0 text-lg font-semibold text-white leading-snug">{category.title}</h3>
+        <h3 className="min-w-0 text-lg font-semibold text-heading leading-snug">{category.title}</h3>
       </div>
       <p className="mt-3 text-sm text-cyber-muted leading-relaxed">{category.blurb}</p>
 
@@ -94,7 +94,7 @@ function CategoryCard({ category, index }: { category: SkillCategory; index: num
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="px-3 py-1.5 rounded-md font-mono text-xs tracking-[0.5px] border border-cyber-border text-[#cce8ff] bg-cyber-cyan/[0.03]"
+                  className="chip px-3 py-1.5 rounded-md font-mono text-xs tracking-[0.5px]"
                 >
                   {item}
                 </li>
@@ -116,7 +116,7 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           Skills
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />

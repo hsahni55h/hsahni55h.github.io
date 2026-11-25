@@ -63,7 +63,7 @@ function Milestone({
               className={cn(
                 "text-xs font-mono uppercase tracking-[2px] px-2 py-0.5 rounded border",
                 m.kind === "education"
-                  ? "text-cyber-purple border-cyber-purple/40"
+                  ? "text-cyber-violet border-cyber-purple/50"
                   : "text-cyber-green border-cyber-green/30"
               )}
             >
@@ -73,9 +73,9 @@ function Milestone({
               <span className="text-xs font-mono uppercase tracking-[2px] text-cyber-green">● Now</span>
             )}
           </div>
-          <h3 className="mt-2 text-base sm:text-lg font-bold text-white">{m.title}</h3>
-          <p className="text-sm text-cyber-cyan font-medium tracking-[1px]">{m.org}</p>
-          <p className="mt-2 text-sm text-[#cce8ff]/75 leading-relaxed">{m.blurb}</p>
+          <h3 className="mt-2 text-base sm:text-lg font-bold text-heading">{m.title}</h3>
+          <p className="text-sm text-foreground font-medium tracking-[1px]">{m.org}</p>
+          <p className="mt-2 text-sm text-foreground/90 leading-relaxed">{m.blurb}</p>
           <span className="mt-3 inline-flex items-center gap-1 text-xs font-mono uppercase tracking-[3px] text-cyber-muted group-hover:text-cyber-cyan transition-colors">
             Details <span aria-hidden="true">→</span>
           </span>
@@ -99,16 +99,16 @@ export function Journey() {
           transition={{ duration: 0.5 }}
           className="mb-10 md:mb-14 md:text-center"
         >
-          <p className="text-xs font-mono uppercase tracking-[4px] text-cyber-green mb-3">
+          <p className="text-xs font-mono uppercase tracking-[4px] text-cyber-muted mb-3">
             {`// ${journey.length} nodes · ~30 second read`}
           </p>
           <h2
             id="journey-heading"
-            className="text-3xl md:text-4xl font-bold text-white tracking-[2px] uppercase"
+            className="text-3xl md:text-4xl font-bold text-heading tracking-[2px] uppercase"
           >
             My journey
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[#cce8ff]/70 max-w-xl md:mx-auto">
+          <p className="mt-3 text-sm sm:text-base text-foreground/85 max-w-xl md:mx-auto">
             From building robots to shipping enterprise AI. Scroll to fire each node.
           </p>
         </motion.div>

@@ -14,7 +14,7 @@ function BulletList({ bullets }: { bullets: string[] }) {
   return (
     <ul className="space-y-2">
       {bullets.map((bullet, j) => (
-        <li key={j} className="text-sm text-[#cce8ff]/70 leading-relaxed flex gap-2">
+        <li key={j} className="text-sm text-foreground/85 leading-relaxed flex gap-2">
           <span className="text-cyber-cyan mt-0.5 shrink-0" aria-hidden="true">
             ▸
           </span>
@@ -81,18 +81,18 @@ function TimelineItem({
                 Node {String(index + 1).padStart(2, "0")}
                 {current && <span className="text-cyber-green"> · Active</span>}
               </p>
-              <h3 className="text-base sm:text-lg font-bold text-white">{exp.role}</h3>
-              <p className="text-sm text-cyber-cyan mt-0.5 font-medium tracking-[1px]">
+              <h3 className="text-base sm:text-lg font-bold text-heading">{exp.role}</h3>
+              <p className="text-sm text-foreground mt-0.5 font-medium tracking-[1px]">
                 {exp.company} · {exp.location}
               </p>
             </div>
-            <span className="self-start inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full sm:whitespace-nowrap tracking-[2px]">
+            <span className="self-start inline-block text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full sm:whitespace-nowrap tracking-[2px]">
               {exp.period}
             </span>
           </div>
 
           {exp.summary && (
-            <p className="mt-3 text-sm text-[#cce8ff]/80 leading-relaxed">{exp.summary}</p>
+            <p className="mt-3 text-sm text-foreground/90 leading-relaxed">{exp.summary}</p>
           )}
 
           <span className="mt-4 flex items-center gap-2 text-xs font-mono uppercase tracking-[3px] text-cyber-muted">
@@ -125,7 +125,7 @@ function TimelineItem({
                   {exp.bullets && <BulletList bullets={exp.bullets} />}
                   {exp.projects?.map((project) => (
                     <div key={project.title}>
-                      <h4 className="text-sm font-bold text-cyber-green font-mono tracking-[1px] mb-3">
+                      <h4 className="text-sm font-bold text-heading font-mono tracking-[1px] mb-3">
                         {project.title}
                       </h4>
                       <BulletList bullets={project.bullets} />
@@ -163,7 +163,7 @@ export function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-4 tracking-[2px] uppercase flex items-center gap-5"
         >
           Experience
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />

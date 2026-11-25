@@ -16,7 +16,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           About Me
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
@@ -54,7 +54,7 @@ export function About() {
             {about.bio.map((paragraph, i) => (
               <p
                 key={i}
-                className="text-[#cce8ff]/75 leading-relaxed"
+                className="text-foreground/90 leading-relaxed"
               >
                 {paragraph}
               </p>

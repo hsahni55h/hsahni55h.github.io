@@ -15,7 +15,7 @@ export function Certifications() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-12 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-12 tracking-[2px] uppercase flex items-center gap-5"
         >
           Certifications
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
@@ -36,7 +36,7 @@ export function Certifications() {
             >
               <div className="text-2xl shrink-0 mt-0.5">🏆</div>
               <div>
-                <h3 className="font-semibold text-white group-hover:text-cyber-cyan transition-colors text-sm leading-snug">
+                <h3 className="font-semibold text-heading group-hover:text-cyber-cyan transition-colors text-sm leading-snug">
                   {cert.name}
                 </h3>
                 <p className="text-xs text-cyber-muted mt-1 font-mono tracking-[1px]">

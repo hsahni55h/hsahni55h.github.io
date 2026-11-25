@@ -44,7 +44,7 @@ function ExternalLinkIcon() {
 // ── Course / context label ──────────────────────────────────
 function ProjectContext({ project, className = "" }: { project: Project; className?: string }) {
   return (
-    <p className={`text-xs font-mono tracking-[1px] text-cyber-purple/90 ${className}`}>
+    <p className={`text-xs font-mono tracking-[1px] text-cyber-violet ${className}`}>
       {project.course ? (
         <>
           <span className="text-cyber-muted">Chalmers MSc course · </span>
@@ -92,11 +92,11 @@ function ProjectModal({
         {/* Header */}
         <div className="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 pb-4 bg-[#050f1f] border-b border-cyber-border">
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-white leading-tight">
+            <h3 className="text-xl font-bold text-heading leading-tight">
               {project.title}
             </h3>
             {project.period && (
-              <p className="text-xs font-mono text-cyber-green mt-1 tracking-[2px]">
+              <p className="text-xs font-mono text-cyber-muted mt-1 tracking-[2px]">
                 {project.period}
               </p>
             )}
@@ -132,7 +132,7 @@ function ProjectModal({
             {project.bullets.map((bullet, j) => (
               <li
                 key={j}
-                className="text-sm text-[#cce8ff]/60 leading-relaxed flex gap-2"
+                className="text-sm text-foreground/85 leading-relaxed flex gap-2"
               >
                 <span className="text-cyber-cyan mt-0.5 shrink-0">▸</span>
                 <span>{bullet}</span>
@@ -143,7 +143,7 @@ function ProjectModal({
           {/* Videos */}
           {project.videos && project.videos.length > 0 && (
             <div className="space-y-3">
-              <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px]">
+              <p className="text-xs font-mono text-cyber-muted uppercase tracking-[3px]">
                 Demo
               </p>
               <div
@@ -168,14 +168,14 @@ function ProjectModal({
 
           {/* Tech stack */}
           <div className="pt-4 border-t border-cyber-border">
-            <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
+            <p className="text-xs font-mono text-cyber-muted uppercase tracking-[3px] mb-3">
               Tech Stack
             </p>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs font-mono px-2.5 py-1 bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
+                  className="chip text-xs font-mono px-2.5 py-1 rounded-md tracking-[0.5px]"
                 >
                   {tech}
                 </span>
@@ -200,7 +200,7 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-16 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-16 tracking-[2px] uppercase flex items-center gap-5"
         >
           Projects
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
@@ -225,11 +225,11 @@ export function Projects() {
                 >
                   {/* Title + period */}
                   <div className="flex flex-col-reverse gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                    <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-cyber-cyan transition-colors leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-heading group-hover:text-cyber-cyan transition-colors leading-snug">
                       {project.title}
                     </h3>
                     {project.period && (
-                      <span className="self-end sm:self-start shrink-0 whitespace-nowrap text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[1px]">
+                      <span className="self-end sm:self-start shrink-0 whitespace-nowrap text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full tracking-[1px]">
                         {project.period}
                       </span>
                     )}
@@ -237,7 +237,7 @@ export function Projects() {
 
                   <ProjectContext project={project} className="mt-2" />
 
-                  <p className="mt-3 text-sm text-[#cce8ff]/70 leading-relaxed">
+                  <p className="mt-3 text-sm text-foreground/85 leading-relaxed">
                     {project.summary ?? project.bullets[0]}
                   </p>
 
@@ -245,7 +245,7 @@ export function Projects() {
                     {project.techStack.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
+                        className="chip text-xs font-mono px-2 py-0.5 rounded-full tracking-[0.5px]"
                       >
                         {tech}
                       </span>

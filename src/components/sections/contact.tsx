@@ -45,7 +45,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-6 tracking-[2px] uppercase flex items-center gap-5"
         >
           Contact
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
@@ -56,7 +56,7 @@ export function Contact() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-[#cce8ff]/65 leading-relaxed mb-12 max-w-2xl"
+          className="text-foreground/85 leading-relaxed mb-12 max-w-2xl"
         >
           I&apos;m open to new opportunities, freelance projects, and
           collaborations. Fill out the form and I&apos;ll get back to you as
@@ -87,7 +87,7 @@ export function Contact() {
                   name="name"
                   required
                   placeholder="Your name"
-                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
+                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-foreground placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
                 />
               </div>
               <div>
@@ -103,7 +103,7 @@ export function Contact() {
                   name="email"
                   required
                   placeholder="you@example.com"
-                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
+                  className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-foreground placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@ export function Contact() {
                 name="subject"
                 required
                 placeholder="What is this about?"
-                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
+                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-foreground placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors font-sans"
               />
             </div>
 
@@ -138,7 +138,7 @@ export function Contact() {
                 required
                 rows={5}
                 placeholder="Tell me about your project, opportunity, or just say hi..."
-                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-[#cce8ff] placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors resize-none font-sans"
+                className="w-full px-4 py-3 border border-cyber-border bg-[#07142e]/50 text-foreground placeholder:text-cyber-muted/50 text-base lg:text-sm focus:outline-none focus:border-cyber-cyan transition-colors resize-none font-sans"
               />
             </div>
 
@@ -172,10 +172,10 @@ export function Contact() {
           >
             {/* Location */}
             <div className="border border-cyber-border bg-[#050f1f]/80 p-5">
-              <h3 className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
+              <h3 className="text-xs font-mono text-cyber-muted uppercase tracking-[3px] mb-3">
                 {"// Location"}
               </h3>
-              <p className="text-sm text-[#cce8ff] font-medium">
+              <p className="text-sm text-foreground font-medium">
                 {siteConfig.location}
               </p>
               <p className="text-xs text-cyber-muted mt-1">
@@ -185,12 +185,12 @@ export function Contact() {
 
             {/* Email */}
             <div className="border border-cyber-border bg-[#050f1f]/80 p-5">
-              <h3 className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
+              <h3 className="text-xs font-mono text-cyber-muted uppercase tracking-[3px] mb-3">
                 {"// Email"}
               </h3>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-block py-3 -my-3 text-sm text-[#cce8ff] font-medium hover:text-cyber-cyan transition-colors break-all font-mono tracking-[1px]"
+                className="inline-block py-3 -my-3 text-sm text-foreground font-medium hover:text-cyber-cyan transition-colors break-all font-mono tracking-[1px]"
               >
                 {siteConfig.email}
               </a>
@@ -198,7 +198,7 @@ export function Contact() {
 
             {/* Socials */}
             <div className="border border-cyber-border bg-[#050f1f]/80 p-5">
-              <h3 className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
+              <h3 className="text-xs font-mono text-cyber-muted uppercase tracking-[3px] mb-3">
                 {"// Links"}
               </h3>
               <div className="space-y-1">
