@@ -86,7 +86,7 @@ function CategoryCard({ category, index }: { category: SkillCategory; index: num
         {category.groups.map((group) => (
           <div key={group.label ?? category.id}>
             {group.label && (
-              <h4 className="mb-2 text-xs font-mono uppercase tracking-[2px] text-cyber-muted">
+              <h4 className="mb-2 text-[13px] font-semibold tracking-[0.5px] text-heading">
                 {group.label}
               </h4>
             )}

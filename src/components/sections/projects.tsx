@@ -96,7 +96,7 @@ function ProjectModal({
               {project.title}
             </h3>
             {project.period && (
-              <p className="text-xs font-mono text-cyber-muted mt-1 tracking-[2px]">
+              <p className="text-xs font-mono font-medium text-(--date-text) mt-1 tracking-[2px]">
                 {project.period}
               </p>
             )}
@@ -229,7 +229,7 @@ export function Projects() {
                       {project.title}
                     </h3>
                     {project.period && (
-                      <span className="self-end sm:self-start shrink-0 whitespace-nowrap text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full tracking-[1px]">
+                      <span className="self-end sm:self-start shrink-0 whitespace-nowrap text-xs font-mono date-pill px-3 py-1 rounded-full tracking-[1px]">
                         {project.period}
                       </span>
                     )}

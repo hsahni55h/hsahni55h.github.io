@@ -14,6 +14,9 @@
   --chip-bg: rgba(160, 190, 225, 0.06);
   --chip-border: rgba(170, 195, 225, 0.24);
   --chip-text: #e6ecf3;
+  --date-text: #7dd3fc;
+  --date-bg: rgba(125, 211, 252, 0.08);
+  --date-border: rgba(125, 211, 252, 0.38);
 }
 
 .dark {
@@ -63,6 +66,14 @@ body {
   color: var(--chip-text);
   background-color: var(--chip-bg);
   border: 1px solid var(--chip-border);
+}
+
+/* Date pill: soft cyan so periods stand out from muted text without competing with titles */
+@utility date-pill {
+  color: var(--date-text);
+  background-color: var(--date-bg);
+  border: 1px solid var(--date-border);
+  font-weight: 500;
 }
 
 /* Full-height hero: vh fallback, then svh so iOS Safari's toolbar doesn't hide content or cause jumps */
