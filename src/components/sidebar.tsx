@@ -102,9 +102,9 @@ const navItems = [
   { href: "/", label: "Home", icon: <HomeIcon /> },
   { href: "/about", label: "About", icon: <UserIcon /> },
   { href: "/experience", label: "Experience", icon: <BriefcaseIcon /> },
-  { href: "/education", label: "Education", icon: <GradCapIcon /> },
-  { href: "/projects", label: "Projects", icon: <CodeIcon /> },
   { href: "/skills", label: "Skills", icon: <ZapIcon /> },
+  { href: "/projects", label: "Projects", icon: <CodeIcon /> },
+  { href: "/education", label: "Education", icon: <GradCapIcon /> },
   { href: "/certifications", label: "Certifications", icon: <AwardIcon /> },
   { href: "/contact", label: "Contact", icon: <MailIcon /> },
 ];

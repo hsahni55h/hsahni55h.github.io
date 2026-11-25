@@ -4,6 +4,8 @@ export interface Education {
   field: string;
   period: string;
   location: string;
+  /** One-line summary used on the home page journey. */
+  summary?: string;
   courses?: string[];
 }
 

@@ -2,18 +2,23 @@
 
 :root {
   --background: #020916;
-  --foreground: #cce8ff;
+  --foreground: #d4dce6;
+  --heading: #f5f8fc;
   --cyan: #00f5ff;
   --green: #00ff88;
   --purple: #7b2fff;
+  --purple-text: #a78bfa;
   --blue: #1a6fff;
-  --muted: #4a6fa5;
+  --muted: #8fa3bf;
   --border: rgba(0, 245, 255, 0.15);
+  --chip-bg: rgba(160, 190, 225, 0.06);
+  --chip-border: rgba(170, 195, 225, 0.24);
+  --chip-text: #e6ecf3;
 }
 
 .dark {
   --background: #020916;
-  --foreground: #cce8ff;
+  --foreground: #d4dce6;
 }
 
 @theme inline {
@@ -22,22 +27,42 @@
   --color-cyber-cyan: var(--cyan);
   --color-cyber-green: var(--green);
   --color-cyber-purple: var(--purple);
+  --color-cyber-violet: var(--purple-text);
   --color-cyber-blue: var(--blue);
   --color-cyber-muted: var(--muted);
   --color-cyber-border: var(--border);
+  --color-heading: var(--heading);
+  --color-chip: var(--chip-text);
+  --color-chip-bg: var(--chip-bg);
+  --color-chip-border: var(--chip-border);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  /* Clears the fixed mobile top bar (h-16) for hash links. Must not exceed the content's top
+     offset, or Next.js treats the page top as hidden and scrolls to a later section on navigation. */
+  scroll-padding-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 0;
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Tag/chip: light text on a faint neutral tint with a clear border */
+@utility chip {
+  color: var(--chip-text);
+  background-color: var(--chip-bg);
+  border: 1px solid var(--chip-border);
 }
 
 /* Full-height hero: vh fallback, then svh so iOS Safari's toolbar doesn't hide content or cause jumps */

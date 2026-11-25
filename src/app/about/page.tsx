@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { About } from "@/components/sections/about";
+import { Journey } from "@/components/sections/journey";
 
 export const metadata: Metadata = {
   title: "About",
@@ -8,5 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <About />;
+  return (
+    <>
+      <About />
+      <Journey />
+    </>
+  );
 }

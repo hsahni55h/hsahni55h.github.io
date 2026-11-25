@@ -4,6 +4,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteConfig } from "@/content";
 
@@ -55,7 +56,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-heading"
         >
           {siteConfig.name}
         </motion.h1>
@@ -73,6 +74,19 @@ export function Hero() {
           </span>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+          className="mt-10"
+        >
+          <Link
+            href="/about"
+            className="inline-flex min-h-11 items-center gap-2 px-5 rounded-md border border-cyber-cyan/30 text-xs font-mono uppercase tracking-[3px] text-cyber-cyan/90 hover:bg-cyber-cyan/10 hover:border-cyber-cyan/60 transition-colors"
+          >
+            My story <span aria-hidden="true">→</span>
+          </Link>
+        </motion.div>
 
       </motion.div>
     </section>

@@ -41,6 +41,22 @@ function ExternalLinkIcon() {
   );
 }
 
+// ── Course / context label ──────────────────────────────────
+function ProjectContext({ project, className = "" }: { project: Project; className?: string }) {
+  return (
+    <p className={`text-xs font-mono tracking-[1px] text-cyber-violet ${className}`}>
+      {project.course ? (
+        <>
+          <span className="text-cyber-muted">Chalmers MSc course · </span>
+          {project.course}
+        </>
+      ) : (
+        <span className="text-cyber-muted">Personal project</span>
+      )}
+    </p>
+  );
+}
+
 // ── Project Detail Modal ────────────────────────────────────
 function ProjectModal({
   project,
@@ -67,20 +83,24 @@ function ProjectModal({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ duration: 0.25, ease: "easeOut" }}
+        role="dialog"
+        aria-modal="true"
+        aria-label={project.title}
         className="relative w-full max-w-2xl max-h-[85vh] max-h-[85dvh] overflow-y-auto overscroll-contain rounded-2xl border border-cyber-border bg-[#050f1f] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="sticky top-0 z-10 flex items-start justify-between gap-4 p-6 pb-4 bg-[#050f1f] border-b border-cyber-border">
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-white leading-tight">
+            <h3 className="text-xl font-bold text-heading leading-tight">
               {project.title}
             </h3>
             {project.period && (
-              <p className="text-xs font-mono text-cyber-green mt-1 tracking-[2px]">
+              <p className="text-xs font-mono text-cyber-muted mt-1 tracking-[2px]">
                 {project.period}
               </p>
             )}
+            <ProjectContext project={project} className="mt-1" />
           </div>
           <div className="flex items-center gap-2 shrink-0">
             {project.github && (
@@ -112,7 +132,7 @@ function ProjectModal({
             {project.bullets.map((bullet, j) => (
               <li
                 key={j}
-                className="text-sm text-[#cce8ff]/60 leading-relaxed flex gap-2"
+                className="text-sm text-foreground/85 leading-relaxed flex gap-2"
               >
                 <span className="text-cyber-cyan mt-0.5 shrink-0">▸</span>
                 <span>{bullet}</span>
@@ -123,7 +143,7 @@ function ProjectModal({
           {/* Videos */}
           {project.videos && project.videos.length > 0 && (
             <div className="space-y-3">
-              <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px]">
+              <p className="text-xs font-mono text-cyber-muted uppercase tracking-[3px]">
                 Demo
               </p>
               <div
@@ -148,14 +168,14 @@ function ProjectModal({
 
           {/* Tech stack */}
           <div className="pt-4 border-t border-cyber-border">
-            <p className="text-xs font-mono text-cyber-green uppercase tracking-[3px] mb-3">
+            <p className="text-xs font-mono text-cyber-muted uppercase tracking-[3px] mb-3">
               Tech Stack
             </p>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs font-mono px-2.5 py-1 bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
+                  className="chip text-xs font-mono px-2.5 py-1 rounded-md tracking-[0.5px]"
                 >
                   {tech}
                 </span>
@@ -180,78 +200,78 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-16 tracking-[2px] uppercase flex items-center gap-5"
+          className="text-3xl md:text-4xl font-bold text-heading mb-16 tracking-[2px] uppercase flex items-center gap-5"
         >
           Projects
           <span className="flex-1 h-px bg-gradient-to-r from-cyber-border to-transparent" />
         </motion.h2>
 
-        <div className="space-y-5">
-          {projects.map((project, i) => (
-            <motion.article
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              onClick={() => setSelected(project)}
-              className="group cursor-pointer rounded-xl border border-cyber-border p-5 hover:border-cyber-cyan/40 transition-all duration-300 bg-[#050f1f]/80 hover:translate-y-[-6px] flex flex-col relative overflow-hidden"
-            >
-              {/* Top row: icons for available content */}
-              <div className="flex items-center justify-between mb-3">
-                {project.period && (
-                  <span className="inline-block text-xs font-mono text-cyber-green border border-cyber-green/30 px-3 py-1 rounded-full tracking-[1px]">
-                    {project.period}
-                  </span>
-                )}
-                <div className="flex items-center gap-2 text-cyber-muted">
-                  {project.videos && project.videos.length > 0 && (
-                    <span title="Has demo video">
-                      <VideoIcon />
+        <ul className="space-y-5">
+          {projects.map((project, i) => {
+            const hasDemo = !!project.videos?.length;
+            return (
+              <motion.li
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+              >
+                <button
+                  type="button"
+                  onClick={() => setSelected(project)}
+                  aria-haspopup="dialog"
+                  className="group w-full text-left rounded-xl border border-cyber-border p-5 sm:p-6 bg-[#050f1f]/80 hover:border-cyber-cyan/40 focus-visible:border-cyber-cyan transition-colors duration-300"
+                >
+                  {/* Title + period */}
+                  <div className="flex flex-col-reverse gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                    <h3 className="text-base sm:text-lg font-bold text-heading group-hover:text-cyber-cyan transition-colors leading-snug">
+                      {project.title}
+                    </h3>
+                    {project.period && (
+                      <span className="self-end sm:self-start shrink-0 whitespace-nowrap text-xs font-mono text-cyber-muted border border-chip-border px-3 py-1 rounded-full tracking-[1px]">
+                        {project.period}
+                      </span>
+                    )}
+                  </div>
+
+                  <ProjectContext project={project} className="mt-2" />
+
+                  <p className="mt-3 text-sm text-foreground/85 leading-relaxed">
+                    {project.summary ?? project.bullets[0]}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="chip text-xs font-mono px-2 py-0.5 rounded-full tracking-[0.5px]"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-cyber-border flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-mono tracking-[1px] text-cyber-muted">
+                    <span className="text-cyber-cyan/80 group-hover:text-cyber-cyan transition-colors">
+                      View details →
                     </span>
-                  )}
-                  {project.github && (
-                    <span title="Has source code">
-                      <GitHubIcon />
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Title */}
-              <h3 className="text-base font-bold text-white group-hover:text-cyber-cyan transition-colors leading-snug flex-1">
-                {project.title}
-              </h3>
-
-              {/* Preview: first bullet truncated */}
-              <p className="mt-3 text-sm text-[#cce8ff]/60 leading-relaxed line-clamp-2">
-                {project.bullets[0]}
-              </p>
-
-              {/* Tech stack tags */}
-              <div className="mt-4 flex flex-wrap gap-1.5 pt-3 border-t border-cyber-border">
-                {project.techStack.slice(0, 4).map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs lg:text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]"
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {project.techStack.length > 4 && (
-                  <span className="text-xs lg:text-[11px] font-mono px-2 py-0.5 rounded-full bg-cyber-cyan/5 border border-cyber-border text-cyber-cyan tracking-[1px]">
-                    +{project.techStack.length - 4}
-                  </span>
-                )}
-              </div>
-
-              {/* Click hint */}
-              <p className="mt-3 text-xs lg:text-[11px] text-cyber-muted/60 font-mono group-hover:text-cyber-cyan/60 transition-colors tracking-[1px]">
-                Click to view details →
-              </p>
-            </motion.article>
-          ))}
-        </div>
+                    {hasDemo && (
+                      <span className="inline-flex items-center gap-1.5">
+                        <VideoIcon className="w-3.5 h-3.5" /> Demo video
+                      </span>
+                    )}
+                    {project.github && (
+                      <span className="inline-flex items-center gap-1.5">
+                        <GitHubIcon className="w-3.5 h-3.5" /> Source code
+                      </span>
+                    )}
+                  </div>
+                </button>
+              </motion.li>
+            );
+          })}
+        </ul>
       </div>
 
       {/* Detail Modal */}
