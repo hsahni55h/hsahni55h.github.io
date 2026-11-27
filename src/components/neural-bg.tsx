@@ -17,7 +17,7 @@ const LAYERS = [5, 8, 8, 3]; // home "input → hidden → hidden → output" fo
 const CURSOR_RADIUS = 160; // px
 const RIPPLE_SPEED = 420; // px per second
 const RIPPLE_LIFE = 1.4; // seconds
-const FORM_FIRST_DELAY = 5;
+const FORM_FIRST_DELAY = 1; // starts at ~1s, settles into the formation by ~3s
 const FORM_HOLD = 4.5;
 const FORM_IDLE = 11;
 
